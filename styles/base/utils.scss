@@ -1,0 +1,47 @@
+@mixin lookBorder {
+  border: solid 0.1rem $orange;
+}
+
+@mixin lookBorderBlue {
+  border: solid 0.1rem $blue;
+}
+
+@mixin lookBorderPurple {
+  border: solid 0.1rem $purple;
+}
+
+@mixin lookBorderGreen {
+  border: solid 0.1rem $green;
+}
+
+@mixin mq($breakpoint) {
+  @if $breakpoint == m350 {
+    @media (min-width: 21.875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m600 {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m900 {
+    @media (min-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m1200 {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m1600 {
+    @media (min-width: 100em) {
+      @content;
+    }
+  }
+}

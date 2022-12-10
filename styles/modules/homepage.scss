@@ -1,0 +1,121 @@
+@keyframes wheels {
+  0% {
+    text-shadow: 0.1rem 0.1rem 0.1rem $shadow;
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    text-shadow: 0.1rem 0.1rem 0.1rem $shadow--tiny;
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  95% {
+    text-shadow: 0.1rem 0.1rem 0.1rem $black;
+  }
+}
+
+@keyframes words {
+  0% {
+    color: $signBlue;
+  }
+
+  50% {
+    color: $blue;
+    text-shadow: 0.1rem 0.2rem 0.1rem $black;
+  }
+}
+
+.home {
+  &Container {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: azure;
+    color: $signBlue;
+  }
+
+  &HeadlineContainer {
+    @include mq(m600) {
+      padding: 2rem 0 0;
+    }
+
+    @include mq(m350) {
+      padding: 2rem 0.6rem 2rem 0.3rem;
+    }
+
+    padding: 2rem 0.6rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &HeadlineBox {
+    @include mq(m600) {
+      padding: 0.3rem 1.5rem;
+    }
+
+    padding: 0.1rem 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.09rem $shadow;
+    text-align: center;
+    background-color: $signYellow;
+  }
+
+  &Headline {
+    margin: 0;
+  }
+
+  &Wheel {
+    @include mq(m600) {
+      font-size: 2.5rem;
+      padding: 0 0.1rem 0 0.5rem;
+    }
+
+    font-family: "Faster One", sans-serif;
+    font-size: 1.8rem;
+    color: $shadow--light;
+    padding: 0 0.1rem 0 0.4rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem $shadow;
+    animation: wheels 9s ease-out infinite;
+  }
+
+  &L {
+    @include mq(m600) {
+      font-size: 4.7rem;
+    }
+
+    font-family: "Gruppo", cursive;
+    font-size: 3.5rem;
+    color: $shadowFaded;
+    text-shadow: 0.1rem 0.05rem 0rem $signBlue;
+  }
+
+  &Word {
+    @include mq(m600) {
+      font-size: 3.5rem;
+    }
+
+    font-family: "Stalinist One", sans-serif;
+    font-size: 2.5rem;
+    color: $signBlue;
+    font-weight: 300;
+    text-shadow: 0.1rem 0.2rem 0.1rem $shadow;
+  }
+
+  &TeaserContainer {
+    padding: 0 2rem;
+  }
+
+  &TeaserBox {
+    padding: 1rem;
+    background-color: #fafafa;
+    color: $shadow;
+    font-size: large;
+  }
+}
