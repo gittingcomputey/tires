@@ -16,13 +16,13 @@ const Layout = ({ title, keywords, description, children }) => {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin
+          crossOrigin="true"
         ></link>
       </Head>
 
       <Navbar />
 
-      <main className={styles.homeContainer}>{children}</main>
+      <main className={styles.mainContainer}>{children}</main>
 
       <Footer />
     </div>
