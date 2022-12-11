@@ -45,3 +45,37 @@
     }
   }
 }
+
+// Animations
+@keyframes wheels {
+  0% {
+    text-shadow: 0.1rem 0.1rem 0.1rem $shadow;
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    text-shadow: 0.1rem 0.1rem 0.1rem $shadow--tiny;
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  95% {
+    text-shadow: 0.1rem 0.1rem 0.1rem $black;
+  }
+}
+
+@keyframes words {
+  0% {
+    color: $signBlue;
+  }
+
+  50% {
+    color: $blue;
+    text-shadow: 0.1rem 0.2rem 0.1rem $black;
+  }
+}

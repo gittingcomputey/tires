@@ -1,17 +1,28 @@
 .navi {
+  &Wrapper {
+    background-color: #fafafa;
+    width: 100%;
+  }
+
   &Container {
-    background-color: azure;
+    background-color: #fafafa;
     padding: 1rem 0.5rem;
     margin: 0;
     border-bottom: solid $shadow--bitless 0.1rem;
+    margin: 0 1.5rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   &Each {
-    padding: 0 1rem;
+    font-family: "Goldman", sans-serif;
+    padding: 0 0.5rem;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: large;
+    font-size: 1rem;
+
+    &:hover {
+      scale: 1.1;
+    }
   }
 }

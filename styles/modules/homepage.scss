@@ -1,39 +1,5 @@
-@keyframes wheels {
-  0% {
-    text-shadow: 0.1rem 0.1rem 0.1rem $shadow;
-  }
-
-  25% {
-    transform: scale(1.1);
-  }
-
-  50% {
-    text-shadow: 0.1rem 0.1rem 0.1rem $shadow--tiny;
-  }
-
-  75% {
-    transform: scale(1);
-  }
-
-  95% {
-    text-shadow: 0.1rem 0.1rem 0.1rem $black;
-  }
-}
-
-@keyframes words {
-  0% {
-    color: $signBlue;
-  }
-
-  50% {
-    color: $blue;
-    text-shadow: 0.1rem 0.2rem 0.1rem $black;
-  }
-}
-
 .home {
   &Container {
-    min-height: 100vh;
     padding: 0;
     margin: 0;
     background-color: azure;
@@ -74,12 +40,12 @@
 
   &Wheel {
     @include mq(m600) {
-      font-size: 2.5rem;
-      padding: 0 0.1rem 0 0.5rem;
+      font-size: 2.7rem;
+      padding: 0 0 0 0.7rem;
     }
 
     font-family: "Faster One", sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: $shadow--light;
     padding: 0 0.1rem 0 0.4rem;
     text-shadow: 0.1rem 0.1rem 0.1rem $shadow;
@@ -88,13 +54,14 @@
 
   &L {
     @include mq(m600) {
-      font-size: 4.7rem;
+      font-size: 6rem;
     }
 
     font-family: "Gruppo", cursive;
-    font-size: 3.5rem;
-    color: $shadowFaded;
-    text-shadow: 0.1rem 0.05rem 0rem $signBlue;
+    font-size: 3rem;
+    color: $signBlue;
+    font-style: italic;
+    text-shadow: 0.2rem 0.2rem 0rem $shadowFaded;
   }
 
   &Word {
@@ -111,36 +78,49 @@
 
   &TeaserContainer {
     @include mq(m600) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height: 69vh;
     }
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     background-image: url("../../public/obi-pixel6propix-FmOdtM4KXhk-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
-    min-height: 90vh;
+    min-height: 70vh;
     margin-bottom: 2rem;
   }
 
   &TeaserBox {
     @include mq(m600) {
-      max-width: 40%;
-      font-size: xx-large;
+      font-size: x-large;
       padding: 1rem 2rem;
     }
 
+    @include mq(m900) {
+      max-width: 50%;
+    }
+
+    @include mq(m1200) {
+      max-width: 40%;
+    }
+
+    @include mq(m1600) {
+      max-width: 30%;
+    }
+
     font-family: "Goldman", sans-serif;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     background-color: wheat;
-    color: $shadow;
+    opacity: 0.9;
+    color: $blue;
     font-size: large;
     font-weight: 400;
     text-align: center;
-    border-radius: 0.7rem;
+    border-radius: 0.3rem;
     box-shadow: 0.2rem 0.1rem 0.5rem $shadow;
   }
 
@@ -148,42 +128,109 @@
     font-size: smaller;
   }
 
+  &TeaserName {
+    font-size: larger;
+    text-shadow: 0.1rem 0.1rem $shadow--tiny;
+  }
+
+  &TeaserAddyBox {
+    background-color: #fafafa;
+    padding: 0.01rem;
+    color: $black;
+    filter: drop-shadow(0.4rem 0.4rem $black);
+  }
+
   &ServicesContainer {
     @include mq(m600) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
+      padding: 4rem;
+      gap: 4rem;
     }
 
+    @include mq(m900) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      padding: 4rem;
+    }
+
+    @include mq(m1600) {
+      padding: 4rem 15rem;
+    }
+
+    padding: 2rem 0.7rem;
     border-top: solid $shadow 3rem;
-    min-height: 100vh;
     background-color: #5abfd1;
     color: $shadow;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 4rem;
-    padding: 6rem 4rem;
+    gap: 2rem;
   }
 
   &ServicesBox {
-    text-align: center;
     background-color: azure;
     border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem $shadow;
   }
 
   &ServicesHeadlineBox {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
+    text-align: center;
   }
 
   &ServicesHeadline {
+    @include mq(m900) {
+      font-size: xx-large;
+    }
+
     text-transform: uppercase;
     font-family: "Rubik Distressed", sans-serif;
-    color: $signBlue;
+    color: $shadow;
     font-size: x-large;
     text-shadow: 0.2rem 0.2rem 0rem $signYellow;
-    margin: 0.2rem 0;
+  }
+
+  &ServicesContentBox {
+  }
+
+  &ServicesContentUL {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  &ServicesContentLI {
+    @include mq(m900) {
+      font-size: medium;
+    }
+
+    font-size: small;
+    font-family: "Stalinist One", sans-serif;
+    text-shadow: 0.1rem 0.1rem $signYellow;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    transform: translateX(-1rem);
+    text-align: center;
+  }
+
+  &ServicesContentIcon {
+    transform: translateX(-0.5rem);
+    font-size: xxx-large;
+    padding-right: 1rem;
+  }
+
+  &ServicesContentReview {
+    @include mq(m900) {
+      font-size: large;
+      margin: 2rem;
+    }
+
+    padding: 0.8rem 2rem;
+    margin: 1rem;
+    font-family: monospace;
+    font-size: medium;
+    font-style: italic;
+    color: $black;
+    background-color: $white;
+    outline: 2px inset $signYellow;
+    border-radius: 0.3rem;
   }
 
   &TireTracks {
