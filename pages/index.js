@@ -21,13 +21,23 @@ export default function Home() {
           </div>
 
           <div className={styles.homeTeaserContainer}>
+            <div className={styles.homeTeaserFloatText}>
+              <p>
+                CLC Tires has been servicing The San Fernando valley since DATE.
+                We are family owned and operated, fast and reliable, and offer a
+                wide variety of new and used tires.
+              </p>
+              <p>
+                {" "}
+                Our professional and experienced team members are ready to help
+                with all of your tire needs.
+              </p>
+            </div>
             <div className={styles.homeTeaserBox}>
-              <p className={styles.homeTeaserText}>
-                <span className={styles.homeTeaserName}>CLC Tires</span> has
-                been servicing The San Fernando valley since DATE. We are family
-                owned and operated, fast and reliable, and offer a wide variety
-                of new and used tires. Our professional and experienced team
-                members are ready to help you with all of your tire needs.
+              <p>
+                a map a map a map a map a map ma ljsdlkjflskjdll flkjlkj
+                fjlkjlkjflkjflkjflkjflkj flkjsdlkfslkjdlkfslkdjjlfksjd
+                fslkjflksjlkjslkjf
               </p>
               <div className={styles.homeTeaserAddyBox}>
                 <p className={styles.homeTeaserData}>

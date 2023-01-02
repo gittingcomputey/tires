@@ -40,27 +40,23 @@
 
   &Wheel {
     @include mq(m600) {
-      font-size: 2.7rem;
-      padding: 0 0 0 0.7rem;
+      font-size: 4rem;
     }
 
-    font-family: "Faster One", sans-serif;
+    font-family: "Stalinist One", sans-serif;
     font-size: 2rem;
-    color: $shadow--light;
-    padding: 0 0.1rem 0 0.4rem;
-    text-shadow: 0.1rem 0.1rem 0.1rem $shadow;
-    animation: wheels 9s ease-out infinite;
+    color: $signBlue;
+    text-shadow: 0.2rem 0.2rem 0rem $shadowFaded;
   }
 
   &L {
     @include mq(m600) {
-      font-size: 6rem;
+      font-size: 4rem;
     }
 
-    font-family: "Gruppo", cursive;
-    font-size: 3rem;
+    font-family: "Stalinist One", sans-serif;
+    font-size: 2rem;
     color: $signBlue;
-    font-style: italic;
     text-shadow: 0.2rem 0.2rem 0rem $shadowFaded;
   }
 
@@ -77,41 +73,75 @@
   }
 
   &TeaserContainer {
-    @include mq(m600) {
-      min-height: 69vh;
+    @include mq(m900) {
+      flex-direction: row;
+      padding: 2rem;
+      min-height: 74vh;
+    }
+
+    @include mq(m900) {
+      padding: 0 2rem;
     }
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
+    justify-content: space-between;
+    padding: 0.1rem;
     background-image: url("../../public/obi-pixel6propix-FmOdtM4KXhk-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
-    min-height: 70vh;
-    margin-bottom: 2rem;
+    padding: 0 0.4rem;
+  }
+
+  &TeaserFloatText {
+    @include mq(m900) {
+      max-width: 45%;
+
+      &:hover {
+        background-color: $shadow--bitless;
+        text-shadow: 0.2rem 0.2rem 0 $signBlue;
+      }
+    }
+
+    @include mq(m900) {
+      border: solid 0.1rem white;
+      border-radius: 0.7rem;
+    }
+
+    font-family: "Rubik Mono One", sans-serif;
+    align-self: center;
+    line-height: 3.2rem;
+    color: white;
+    font-size: x-large;
+    padding: 1rem 3rem;
+    text-shadow: 0.2rem 0.2rem 0 #72656b;
+    background-color: transparent;
   }
 
   &TeaserBox {
     @include mq(m600) {
-      font-size: x-large;
+      font-size: 1.2rem;
       padding: 1rem 2rem;
     }
 
     @include mq(m900) {
-      max-width: 50%;
+      max-width: 40%;
+      margin-bottom: none;
     }
 
     @include mq(m1200) {
-      max-width: 40%;
-    }
-
-    @include mq(m1600) {
       max-width: 30%;
     }
 
+    @include mq(m1600) {
+      max-width: 20%;
+    }
+
+    max-width: 80%;
+    margin-bottom: 1rem;
     font-family: "Goldman", sans-serif;
     padding: 1rem;
     background-color: wheat;
@@ -129,8 +159,8 @@
   }
 
   &TeaserName {
-    font-size: larger;
-    text-shadow: 0.1rem 0.1rem $shadow--tiny;
+    font-size: xx-large;
+    text-shadow: 0.1rem 0.1rem 0 $signBlue;
   }
 
   &TeaserAddyBox {
@@ -143,7 +173,6 @@
   &ServicesContainer {
     @include mq(m600) {
       padding: 4rem;
-      gap: 4rem;
     }
 
     @include mq(m900) {
@@ -153,7 +182,7 @@
     }
 
     @include mq(m1600) {
-      padding: 4rem 15rem;
+      padding: 8rem 15rem;
     }
 
     padding: 2rem 0.7rem;
@@ -163,7 +192,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    gap: 6rem;
   }
 
   &ServicesBox {
@@ -198,14 +227,14 @@
 
   &ServicesContentLI {
     @include mq(m900) {
-      font-size: medium;
+      font-size: small;
     }
 
     font-size: small;
     font-family: "Stalinist One", sans-serif;
-    text-shadow: 0.1rem 0.1rem $signYellow;
+    text-shadow: 0.1rem 0.1rem $candle;
     text-transform: uppercase;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     transform: translateX(-1rem);
     text-align: center;
   }
