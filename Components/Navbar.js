@@ -17,29 +17,14 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.naviWrapper}>
-        {!isMobile ? (
-          <nav className={styles.naviContainer}>
-            {router.pathname !== "/" ? (
-              <Link className={styles.naviEach} href="/home">
-                Home
-              </Link>
-            ) : (
-              ""
-            )}
-
-            <Link className={styles.naviEach} href="/services">
-              Services
-            </Link>
-            <Link className={styles.naviEach} href="/contact">
-              Contact
-            </Link>
-            <Link className={styles.naviEach} href="/services">
-              Specials
-            </Link>
-          </nav>
-        ) : (
-          <nav className={styles.naviBurgerContainer}>hamburger</nav>
-        )}
+        <nav className={styles.naviContainer}>
+          <Link className={styles.naviEach} href="/services">
+            Services
+          </Link>
+          <Link className={styles.naviEach} href="/services">
+            Specials
+          </Link>
+        </nav>
       </div>
     </>
   );

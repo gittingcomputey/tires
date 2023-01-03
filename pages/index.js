@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.scss";
 import Layout from "../Components/Layout";
+import Image from "next/image";
 
 import { GiTireTracks, GiTinker, GiTireIron, GiCarWheel } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
@@ -34,11 +35,13 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.homeTeaserBox}>
-              <p>
-                a map a map a map a map a map ma ljsdlkjflskjdll flkjlkj
-                fjlkjlkjflkjflkjflkjflkj flkjsdlkfslkjdlkfslkdjjlfksjd
-                fslkjflksjlkjslkjf
-              </p>
+              <Image
+                className={styles.homeTeaserImg}
+                src="/clc_map.png"
+                width="260"
+                height="260"
+                alt="clc location map"
+              />
               <div className={styles.homeTeaserAddyBox}>
                 <p className={styles.homeTeaserData}>
                   15412 Nordhoff St <br></br> North Hills, CA 91343
