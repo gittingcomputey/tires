@@ -1,0 +1,26 @@
+.specials {
+  &HeadlineContainer {
+    min-height: 100vh;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &HeadlineBox {
+    padding: 2rem 4rem;
+    min-width: 40%;
+    margin-bottom: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.09rem $gray;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $beige;
+  }
+
+  &Headline {
+    font-size: xxx-large;
+    padding: 2rem;
+    border: dashed $shadow 0.2rem;
+  }
+}

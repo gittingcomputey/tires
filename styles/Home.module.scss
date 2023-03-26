@@ -17,6 +17,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
 
 /* import modules and base */
 @import "./base/colors.scss";
@@ -24,6 +25,7 @@
 @import "./modules/homepage.scss";
 @import "./modules/footer.scss";
 @import "./modules/nav.scss";
+@import "./modules/specials.scss";
 
 .container {
   padding: 0;

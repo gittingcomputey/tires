@@ -3,26 +3,16 @@ import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 import { useRouter } from "next/router";
 
-const Navbar = () => {
-  const router = useRouter();
-
-  const [isMobile, setIsMobile] = useState(null);
-  const setNavType = () => {
-    window.innerWidth > 600 ? setIsMobile(false) : setIsMobile(true);
-  };
-  useEffect(() => {
-    setNavType();
-  }, []);
-
+const Navbar = (props) => {
   return (
     <>
       <div className={styles.naviWrapper}>
         <nav className={styles.naviContainer}>
-          <Link className={styles.naviEach} href="/services">
-            Services
-          </Link>
-          <Link className={styles.naviEach} href="/services">
-            Specials
+          <Link
+            className={styles.naviEach}
+            href={props.navTitle === "specials" ? "/specials" : "/"}
+          >
+            {props.navTitle}
           </Link>
         </nav>
       </div>

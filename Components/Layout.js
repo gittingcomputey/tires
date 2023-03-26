@@ -20,8 +20,6 @@ const Layout = ({ title, keywords, description, children }) => {
         ></link>
       </Head>
 
-      <Navbar />
-
       <main className={styles.mainContainer}>{children}</main>
 
       <Footer />

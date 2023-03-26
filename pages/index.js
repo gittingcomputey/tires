@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.scss";
 import Layout from "../Components/Layout";
 import Image from "next/image";
+import Navbar from "../Components/Navbar";
 
 import { GiTireTracks, GiTinker, GiTireIron, GiCarWheel } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <>
       <Layout>
+        <Navbar navTitle={"specials"} />
         <div className={styles.homeContainer}>
           <div className={styles.homeHeadlineContainer}>
             <div className={styles.homeHeadlineBox}>
@@ -23,15 +25,16 @@ export default function Home() {
 
           <div className={styles.homeTeaserContainer}>
             <div className={styles.homeTeaserFloatText}>
-              <p>
+              <p className={styles.homeInner}>
                 CLC Tires has been servicing The San Fernando valley since DATE.
-                We are family owned and operated, fast and reliable, and offer a
-                wide variety of new and used tires.
+                A friendly, fast, and reliable family-operated business.
               </p>
               <p>
                 {" "}
-                Our professional and experienced team members are ready to help
-                with all of your tire needs.
+                Offering a wide variety of new and used tires. We also provide
+                puncture-patching and professional alignment services. Our
+                experienced team members are ready to help with all of your tire
+                needs.
               </p>
             </div>
             <div className={styles.homeTeaserBox}>
@@ -54,10 +57,10 @@ export default function Home() {
           </div>
 
           {/* services section */}
-          <div className={styles.homeServicesContainer}>
+          <div id="services" className={styles.homeServicesContainer}>
             <div className={styles.homeServicesBox}>
               <div className={styles.homeServicesHeadlineBox}>
-                <h2 className={styles.homeServicesHeadline}>--Services--</h2>
+                <h2 className={styles.homeServicesHeadline}>Services</h2>
               </div>
               <div className={styles.homeServicesContentBox}>
                 <ul className={styles.homeServicesContentUL}>
@@ -86,9 +89,7 @@ export default function Home() {
             </div>
             <div className={styles.homeServicesBox}>
               <div className={styles.homeServicesHeadlineBox}>
-                <h2 className={styles.homeServicesHeadline}>
-                  --Appreciation--
-                </h2>
+                <h2 className={styles.homeServicesHeadline}>Appreciation</h2>
               </div>
               <div className={styles.homeServicesContentBox}>
                 <p className={styles.homeServicesContentReview}>

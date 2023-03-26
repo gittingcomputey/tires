@@ -8,10 +8,6 @@
 
   &HeadlineContainer {
     @include mq(m600) {
-      padding: 2rem 0 0;
-    }
-
-    @include mq(m350) {
       padding: 2rem 0.6rem 2rem 0.3rem;
     }
 
@@ -66,83 +62,89 @@
     }
 
     font-family: "Stalinist One", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: $signBlue;
     font-weight: 300;
     text-shadow: 0.1rem 0.2rem 0.1rem $shadow;
   }
 
   &TeaserContainer {
-    @include mq(m1200) {
-      flex-direction: row;
-      padding: 0 2rem;
-      min-height: 74vh;
+    @include mq(m600) {
+      grid-template-columns: 1fr 1fr;
     }
 
-    display: flex;
-    flex-direction: column;
+    @include mq(m1200) {
+      padding: 3rem 6rem;
+      min-height: 74vh;
+      gap: 7rem;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: space-between;
+
     background-image: url("../../public/obi-pixel6propix-FmOdtM4KXhk-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 0 0.4rem;
   }
 
   &TeaserFloatText {
+    @include mq(m600) {
+      font-size: medium;
+      line-height: 2.7;
+    }
+
     @include mq(m1200) {
-      max-width: 45%;
       border-radius: 0.7rem;
-      font-size: x-large;
-      border: solid 0.1rem white;
+      font-size: large;
       line-height: 3.2rem;
-      text-shadow: 0.2rem 0.2rem 0 #72656b;
+      height: 100%;
+      background-color: #fafafaeb;
+      padding: 3rem;
+      color: $shadow--bitless;
+      transition: 0.4s ease-in-out;
 
       &:hover {
-        text-shadow: 0.2rem 0.2rem 0 $signBlue;
+        text-shadow: 0.1rem 0.1rem 0 #72656b;
         background-color: $shadow--bitless;
+        cursor: none;
+        color: white;
+      }
+
+      &:active {
+        text-shadow: 0.1rem 0.1rem 0 #72656b;
+        background-color: $signBlue;
+        color: $signYellow;
+        opacity: 0.7;
+        cursor: crosshair;
       }
     }
 
+    color: #fafafa;
     font-family: "Rubik Mono One", sans-serif;
-    align-self: center;
-    color: white;
-    font-size: medium;
-    line-height: 1.7rem;
+    font-size: small;
+    line-height: 2.5rem;
     padding: 0.5rem;
     margin: 0.5rem;
-    text-shadow: 0.2rem 0.2rem 0 $signBlue;
+  }
+
+  &Inner {
+    filter: opacity(1);
   }
 
   &TeaserBox {
-    @include mq(m600) {
-      font-size: 1.2rem;
-      padding: 1rem 2rem;
-    }
-
-    @include mq(m900) {
-      max-width: 40%;
-      margin-bottom: none;
-    }
-
-    @include mq(m1200) {
-      max-width: 30%;
-    }
-
-    @include mq(m1600) {
-      max-width: 20%;
-    }
-
-    max-width: 98%;
-    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: "Goldman", sans-serif;
-    padding: 1rem;
+    padding: 3rem;
     background-color: wheat;
     opacity: 0.9;
+    height: 100%;
     color: $blue;
-    font-size: large;
+    flex-direction: column;
     font-weight: 400;
     text-align: center;
     border-radius: 0.3rem;
@@ -150,16 +152,19 @@
   }
 
   &TeaserData {
-    font-size: smaller;
+    padding: 0.2rem 2rem;
+    font-size: large;
   }
 
   &TeaserImg {
+    filter: contrast(140%);
     max-width: 100%;
   }
 
   &TeaserAddyBox {
     background-color: #fafafa;
-    padding: 0;
+    padding: 0.5rem;
+    margin-top: 2rem;
     color: $black;
     filter: drop-shadow(0.4rem 0.4rem $black);
   }
@@ -211,10 +216,10 @@
     }
 
     text-transform: uppercase;
-    font-family: "Rubik Distressed", sans-serif;
-    color: $shadow;
+    font-family: "Red Hat Mono", sans-serif;
+    color: $black;
     font-size: large;
-    text-shadow: 0.2rem 0.2rem 0rem $signYellow;
+    text-shadow: 0.05rem 0.05rem 0.05rem $signYellow;
   }
 
   &ServicesContentBox {
