@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.scss";
 import Layout from "../Components/Layout";
 import Image from "next/image";
 import Navbar from "../Components/Navbar";
+import Link from "next/link";
 
 import { GiTireTracks, GiTinker, GiTireIron, GiCarWheel } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
@@ -31,9 +32,9 @@ export default function Home() {
               </p>
               <p>
                 {" "}
-                We are a family-operated business located in North Hills, CA.
-                Our experienced team members are ready to help with all of your
-                tire needs.
+                A family-operated business located in North Hills, CA. Our
+                experienced team members are ready to help with all of your tire
+                needs.
               </p>
             </div>
             <div className={styles.homeTeaserBox}>
@@ -51,6 +52,12 @@ export default function Home() {
                 <p className={styles.homeTeaserData}>
                   PHONE: <br></br>818-830-5189
                 </p>
+                <Link
+                  target={"_blank"}
+                  href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
+                >
+                  <button className={styles.homeAddyButton}>OPEN MAP</button>
+                </Link>
               </div>
             </div>
           </div>

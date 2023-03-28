@@ -13,6 +13,10 @@ const Footer = () => {
           Mon-Sat: 11am - 6pm <br />
           Sunday: 11am - 5pm
         </h4>
+        <p className={styles.footerCopy}>
+          <Link href="https://www.gettingcomputey.com">gettingComputey</Link>{" "}
+          &#169;2023
+        </p>
       </div>
     </div>
   );

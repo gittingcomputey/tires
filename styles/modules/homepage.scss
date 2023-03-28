@@ -183,6 +183,16 @@
     filter: drop-shadow(0.4rem 0.4rem $black);
   }
 
+  &AddyButton {
+    font-family: serif;
+    cursor: pointer;
+    background-color: rgba(35, 35, 218, 0.732);
+    padding: 0.3rem 0.5rem;
+    color: #fafafa;
+    border: none;
+    margin-bottom: 0.2rem;
+  }
+
   &ServicesContainer {
     @include mq(m1200) {
       border-top: solid $shadow 3rem;

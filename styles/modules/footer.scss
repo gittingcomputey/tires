@@ -11,4 +11,13 @@
     font-family: "Red Hat Mono", sans-serif;
     font-size: small;
   }
+
+  &Copy {
+    font-size: x-small;
+    margin-top: 4rem;
+
+    & a {
+      color: #fafafa;
+    }
+  }
 }

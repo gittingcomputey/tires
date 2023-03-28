@@ -20,12 +20,15 @@
 
   &HeadlineBox {
     @include mq(m900) {
-      padding: 0 2rem;
+      padding: 0 5rem;
       width: 85%;
       opacity: 0.75;
-      border: none;
+      border: inset $shadow--bitless 0.2rem;
     }
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 17rem;
     text-align: center;
     text-transform: uppercase;
@@ -36,12 +39,12 @@
     );
     color: black;
     opacity: 0.9;
-    // border: solid #caec16 0.3rem;
   }
 
   &Headline {
     font-size: xx-large;
     padding: 2.5rem;
+    max-width: fit-content;
     border: dashed $shadow--bitless 0.2rem;
   }
 }
