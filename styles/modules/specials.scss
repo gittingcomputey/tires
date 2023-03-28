@@ -1,26 +1,47 @@
 .specials {
   &HeadlineContainer {
-    min-height: 100vh;
-    background-color: black;
+    @include mq(m900) {
+      padding: 2rem 0;
+      min-height: 71vh;
+      filter: grayscale(20%) brightness(89%) contrast(210%) blur(0.5px)
+        hue-rotate(10deg);
+      background-image: url(../../public/clcnite.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
   }
 
   &HeadlineBox {
-    padding: 2rem 4rem;
-    min-width: 40%;
-    margin-bottom: 0.5rem;
-    box-shadow: 0.2rem 0.2rem 0.09rem $gray;
+    @include mq(m900) {
+      padding: 0 2rem;
+      width: 85%;
+      opacity: 0.75;
+      border: none;
+    }
+
+    padding: 2rem 17rem;
     text-align: center;
     text-transform: uppercase;
-    background-color: $beige;
+    background-image: linear-gradient(
+      174.2deg,
+      rgba(255, 244, 228, 1) 7.1%,
+      rgba(240, 246, 238, 1) 67.4%
+    );
+    color: black;
+    opacity: 0.9;
+    // border: solid #caec16 0.3rem;
   }
 
   &Headline {
-    font-size: xxx-large;
-    padding: 2rem;
-    border: dashed $shadow 0.2rem;
+    font-size: xx-large;
+    padding: 2.5rem;
+    border: dashed $shadow--bitless 0.2rem;
   }
 }

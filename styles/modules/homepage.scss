@@ -24,7 +24,6 @@
     }
 
     padding: 0.1rem 0.5rem;
-    margin-bottom: 0.5rem;
     box-shadow: 0.5rem 0.5rem 0.09rem $shadow;
     text-align: center;
     background-color: $signYellow;
@@ -36,29 +35,19 @@
 
   &Wheel {
     @include mq(m600) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     font-family: "Stalinist One", sans-serif;
     font-size: 2rem;
     color: $signBlue;
-    text-shadow: 0.2rem 0.2rem 0rem $shadowFaded;
-  }
-
-  &L {
-    @include mq(m600) {
-      font-size: 4rem;
-    }
-
-    font-family: "Stalinist One", sans-serif;
-    font-size: 2rem;
-    color: $signBlue;
-    text-shadow: 0.2rem 0.2rem 0rem $shadowFaded;
+    font-weight: 300;
+    text-shadow: 0.1rem 0.2rem 0.1rem $shadow;
   }
 
   &Word {
     @include mq(m600) {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
 
     font-family: "Stalinist One", sans-serif;
@@ -69,20 +58,20 @@
   }
 
   &TeaserContainer {
-    @include mq(m600) {
-      grid-template-columns: 1fr 1fr;
+    @include mq(m1200) {
+      grid-template-columns: 45% 45%;
+      justify-content: space-around;
+      padding: 2rem;
     }
 
-    @include mq(m1200) {
-      padding: 3rem 6rem;
+    @include mq(m1600) {
+      grid-template-columns: 40% 40%;
       min-height: 74vh;
-      gap: 7rem;
     }
 
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-
     background-image: url("../../public/obi-pixel6propix-FmOdtM4KXhk-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -92,22 +81,27 @@
 
   &TeaserFloatText {
     @include mq(m600) {
-      font-size: medium;
-      line-height: 2.7;
+      padding: 4rem 2rem;
+      color: black;
+      font-size: x-large;
+    }
+
+    @include mq(m900) {
+      padding: 4rem 8rem;
+      font-size: x-large;
     }
 
     @include mq(m1200) {
       border-radius: 0.7rem;
-      font-size: large;
       line-height: 3.2rem;
       height: 100%;
+      font-size: large;
       background-color: #fafafaeb;
-      padding: 3rem;
-      color: $shadow--bitless;
+      padding: 1.5rem 5rem;
       transition: 0.4s ease-in-out;
+      font-size: x-large;
 
       &:hover {
-        text-shadow: 0.1rem 0.1rem 0 #72656b;
         background-color: $shadow--bitless;
         cursor: none;
         color: white;
@@ -122,19 +116,27 @@
       }
     }
 
-    color: #fafafa;
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: small;
-    line-height: 2.5rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
+    @include mq(m1600) {
+      font-size: xx-large;
+    }
+
+    background-color: #fafafaeb;
+    color: black;
+    font-size: large;
+    font-family: "Gruppo", sans-serif;
+    padding: 2rem 1rem;
   }
 
   &Inner {
-    filter: opacity(1);
+    // filter: opacity(1);
   }
 
   &TeaserBox {
+    @include mq(m600) {
+      border-radius: 0.3rem;
+      box-shadow: 0.2rem 0.1rem 0.5rem $shadow;
+    }
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,62 +149,71 @@
     flex-direction: column;
     font-weight: 400;
     text-align: center;
-    border-radius: 0.3rem;
-    box-shadow: 0.2rem 0.1rem 0.5rem $shadow;
   }
 
   &TeaserData {
-    padding: 0.2rem 2rem;
+    @include mq(m600) {
+      padding: 0.2rem 2rem;
+    }
+
+    padding: 0.2rem;
     font-size: large;
   }
 
   &TeaserImg {
+    @include mq(m600) {
+      width: 64%;
+    }
+
     filter: contrast(140%);
-    max-width: 100%;
+    width: 100%;
   }
 
   &TeaserAddyBox {
+    @include mq(m600) {
+      padding: 0.5rem;
+      width: 64%;
+    }
+
     background-color: #fafafa;
-    padding: 0.5rem;
+    // padding: 0.5rem;
     margin-top: 2rem;
     color: $black;
+    width: 100%;
     filter: drop-shadow(0.4rem 0.4rem $black);
   }
 
   &ServicesContainer {
-    @include mq(m600) {
-      padding: 4rem;
-    }
-
     @include mq(m1200) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      padding: 4rem;
-      gap: 6rem;
       border-top: solid $shadow 3rem;
+      padding: 6rem 0.7rem;
+      row-gap: 6rem;
+      border-top: solid $white 0.7rem;
     }
 
-    @include mq(m1600) {
-      padding: 8rem 15rem;
-    }
-
-    padding: 2rem 0.7rem;
-    border-top: solid $white 0.7rem;
-    background-color: #5abfd1;
+    background-image: linear-gradient(
+      109.6deg,
+      $signBlue 11.2%,
+      rgb(70, 85, 155) 91.2%
+    );
     color: $shadow;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem 0;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    row-gap: 0.2rem;
+    padding: 0;
   }
 
   &ServicesBox {
     @include mq(m1200) {
-      border-radius: 1rem;
+      width: 50%;
     }
 
+    width: 100%;
+    justify-self: center;
+    padding: 1rem 2rem;
     background-color: azure;
-    border-radius: 0.3rem;
     box-shadow: 0.4rem 0.4rem $shadow;
   }
 
@@ -220,9 +231,6 @@
     color: $black;
     font-size: large;
     text-shadow: 0.05rem 0.05rem 0.05rem $signYellow;
-  }
-
-  &ServicesContentBox {
   }
 
   &ServicesContentUL {
@@ -254,7 +262,7 @@
   &ServicesContentReview {
     @include mq(m900) {
       font-size: large;
-      margin: 2rem;
+      margin: 2rem 5rem;
     }
 
     padding: 0.8rem 2rem;
@@ -266,6 +274,19 @@
     background-color: $white;
     outline: 2px inset $signYellow;
     border-radius: 0.3rem;
+  }
+
+  &ServicesEsp {
+    padding: 1rem 0 1.5rem;
+    text-align: center;
+  }
+
+  &ServicesEsp {
+    font-size: medium;
+  }
+
+  &ServicesEspTextCaps {
+    text-transform: uppercase;
   }
 
   &TireTracks {

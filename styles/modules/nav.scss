@@ -7,11 +7,9 @@
   &Container {
     background-color: #fafafa;
     padding: 1rem 0.5rem;
-    margin: 0;
-    border-bottom: solid $shadow--bitless 0.1rem;
-    margin: 0 1.5rem;
     display: flex;
     justify-content: center;
+    border-bottom: solid black 0.02rem;
   }
 
   &Each {

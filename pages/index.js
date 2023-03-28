@@ -15,9 +15,7 @@ export default function Home() {
           <div className={styles.homeHeadlineContainer}>
             <div className={styles.homeHeadlineBox}>
               <h1 className={styles.homeHeadline}>
-                <span className={styles.homeWheel}>C</span>
-                <span className={styles.homeL}>L</span>
-                <span className={styles.homeWheel}>C</span>
+                <span className={styles.homeWheel}>CLC</span>
                 <span className={styles.homeWord}> Tires </span>
               </h1>
             </div>
@@ -27,14 +25,15 @@ export default function Home() {
             <div className={styles.homeTeaserFloatText}>
               <p className={styles.homeInner}>
                 CLC Tires has been servicing The San Fernando valley since DATE.
-                A friendly, fast, and reliable family-operated business.
+                We offer a wide variety of new and used tires,
+                puncture-patching, and professional alignment services.
+                Friendly, fast, and reliable service.
               </p>
               <p>
                 {" "}
-                Offering a wide variety of new and used tires. We also provide
-                puncture-patching and professional alignment services. Our
-                experienced team members are ready to help with all of your tire
-                needs.
+                We are a family-operated business located in North Hills, CA.
+                Our experienced team members are ready to help with all of your
+                tire needs.
               </p>
             </div>
             <div className={styles.homeTeaserBox}>
@@ -111,6 +110,17 @@ export default function Home() {
                   By chance on the corner of Nordhoff and Sepulveda I made a u
                   turn and I found an awesome place. -CDA
                 </p>
+              </div>
+              <div className={styles.homeServicesEsp}>
+                <div className={styles.homeServicesEspBox}>
+                  <h3 className={styles.homeServicesEspText}>
+                    <span className={styles.homeServicesEspTextCaps}>
+                      Se habla español.
+                    </span>{" "}
+                    Vendemos llantas, nuevas y usadas. <br />
+                    Ubicados en North Hills, en el valle de San Fernando.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
