@@ -6,8 +6,17 @@ import Link from "next/link";
 
 import { GiTireTracks, GiTinker, GiTireIron, GiCarWheel } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  // const [width, setWidth] = useState(
+  //   typeof window !== "undefined" ? window.innerWidth : 0
+  // );
+
+  // useEffect(() => {
+  //   setWidth(window.innerWidth);
+  // }, [window.innerWidth]);
+
   return (
     <>
       <Layout>
@@ -27,8 +36,8 @@ export default function Home() {
               <p className={styles.homeInner}>
                 CLC Tires has been servicing The San Fernando valley since DATE.
                 We offer a wide variety of new and used tires,
-                puncture-patching, and professional alignment services.
-                Friendly, fast, and reliable service.
+                puncture-patching, and professional alignment. Friendly, fast,
+                and reliable service.
               </p>
               <p>
                 {" "}
@@ -49,9 +58,7 @@ export default function Home() {
                 <p className={styles.homeTeaserData}>
                   15412 Nordhoff St <br></br> North Hills, CA 91343
                 </p>
-                <p className={styles.homeTeaserData}>
-                  PHONE: <br></br>818-830-5189
-                </p>
+                <p className={styles.homeTeaserData}>818-830-5189</p>
                 <Link
                   target={"_blank"}
                   href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
@@ -64,33 +71,53 @@ export default function Home() {
 
           {/* services section */}
           <div id="services" className={styles.homeServicesContainer}>
-            <div className={styles.homeServicesBox}>
-              <div className={styles.homeServicesHeadlineBox}>
-                <h2 className={styles.homeServicesHeadline}>Services</h2>
-              </div>
-              <div className={styles.homeServicesContentBox}>
-                <ul className={styles.homeServicesContentUL}>
-                  <li>
-                    <GiCarWheel className={styles.homeServicesContentIcon} />
-                  </li>
-                  <li className={styles.homeServicesContentLI}>New tires</li>
-                  <li>
-                    <GiCarWheel className={styles.homeServicesContentIcon} />
-                  </li>
-                  <li className={styles.homeServicesContentLI}>Used tires</li>
-                  <li>
-                    <BiBandAid className={styles.homeServicesContentIcon} />
-                  </li>
-                  <li className={styles.homeServicesContentLI}>
-                    Puncture Patching
-                  </li>
-                  <li>
-                    <GiTireIron className={styles.homeServicesContentIcon} />
-                  </li>
-                  <li className={styles.homeServicesContentLI}>
-                    Alignment and Balancing
-                  </li>
-                </ul>
+            <div
+              className={`${styles.homeServicesBox} ${styles.homeServicesBox1}`}
+            >
+              <div className={styles.homeServicesMid}>
+                <div className={styles.homeServicesHeadlineBox}>
+                  <h2
+                    className={`${styles.homeServicesHeadline} ${styles.homeServicesHeadline1}`}
+                  >
+                    Services
+                  </h2>
+                </div>
+                <div className={styles.homeServicesContentBox}>
+                  <div>
+                    <ul className={styles.homeServicesContentUL}>
+                      <li>
+                        <GiCarWheel
+                          className={styles.homeServicesContentIcon}
+                        />
+                      </li>
+                      <li className={styles.homeServicesContentLI}>
+                        New tires
+                      </li>
+                      <li>
+                        <GiCarWheel
+                          className={styles.homeServicesContentIcon}
+                        />
+                      </li>
+                      <li className={styles.homeServicesContentLI}>
+                        Used tires
+                      </li>
+                      <li>
+                        <BiBandAid className={styles.homeServicesContentIcon} />
+                      </li>
+                      <li className={styles.homeServicesContentLI}>
+                        Puncture Patching
+                      </li>
+                      <li>
+                        <GiTireIron
+                          className={styles.homeServicesContentIcon}
+                        />
+                      </li>
+                      <li className={styles.homeServicesContentLI}>
+                        Alignment and Balancing
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div className={styles.homeServicesBox}>

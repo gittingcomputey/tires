@@ -69,6 +69,7 @@
       min-height: 74vh;
     }
 
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -141,7 +142,6 @@
     align-items: center;
     justify-content: center;
     font-family: "Goldman", sans-serif;
-    padding: 3rem;
     background-color: wheat;
     opacity: 0.9;
     height: 100%;
@@ -163,8 +163,10 @@
   &TeaserImg {
     @include mq(m600) {
       width: 64%;
+      margin-top: 0;
     }
 
+    margin-top: 2rem;
     filter: contrast(140%);
     width: 100%;
   }
@@ -173,14 +175,15 @@
     @include mq(m600) {
       padding: 0.5rem;
       width: 64%;
+      margin-bottom: 0;
+      filter: drop-shadow(0.4rem 0.4rem $black);
     }
 
+    margin-bottom: 1.8rem;
     background-color: #fafafa;
-    // padding: 0.5rem;
     margin-top: 2rem;
     color: $black;
     width: 100%;
-    filter: drop-shadow(0.4rem 0.4rem $black);
   }
 
   &AddyButton {
@@ -190,7 +193,7 @@
     padding: 0.3rem 0.5rem;
     color: #fafafa;
     border: none;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
   }
 
   &ServicesContainer {
@@ -201,10 +204,10 @@
       border-top: solid $white 0.7rem;
     }
 
-    background-image: linear-gradient(
-      109.6deg,
-      $signBlue 11.2%,
-      rgb(70, 85, 155) 91.2%
+    background-image: radial-gradient(
+      circle farthest-corner at 120.3% 71.5%,
+      rgba(83, 138, 214, 1) 0%,
+      rgba(134, 231, 214, 1) 90%
     );
     color: $shadow;
     display: grid;
@@ -218,13 +221,25 @@
   &ServicesBox {
     @include mq(m1200) {
       width: 50%;
+      padding: 2rem;
     }
 
     width: 100%;
     justify-self: center;
-    padding: 1rem 2rem;
     background-color: azure;
-    box-shadow: 0.4rem 0.4rem $shadow;
+    box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
+  }
+
+  &ServicesBox1 {
+    background-image: url("../../public/tires-robert-laursoo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    filter: brightness(90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &ServicesHeadlineBox {
@@ -238,27 +253,46 @@
 
     text-transform: uppercase;
     font-family: "Red Hat Mono", sans-serif;
-    color: $black;
-    font-size: large;
-    text-shadow: 0.05rem 0.05rem 0.05rem $signYellow;
+    text-shadow: 0.02rem 0.02rem 0.1rem #fafafab7;
+    font-weight: 600;
+    margin: 1rem;
+  }
+
+  &ServicesHeadline1 {
+    @include mq(m600) {
+      font-size: xxx-large;
+    }
+
+    color: rgba(83, 138, 214, 1);
+    font-size: xx-large;
+    text-shadow: 0.1rem 0.1rem 0 $signYellow;
+    background-color: #fafafadf;
+    text-align: center;
   }
 
   &ServicesContentUL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     list-style-type: none;
-    text-align: center;
+    filter: contrast(180%) brightness(100%);
+    margin: 1rem;
   }
 
   &ServicesContentLI {
     @include mq(m900) {
-      font-size: small;
-      padding-bottom: 1rem;
+      font-size: medium;
     }
 
-    font-size: x-small;
+    color: $shadow;
+    background-color: #fafafadf;
+    letter-spacing: 0.3rem;
+    font-size: small;
     font-family: "Stalinist One", sans-serif;
-    text-shadow: 0.1rem 0.1rem $candle;
     text-transform: uppercase;
-    padding-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
     transform: translateX(-1rem);
     text-align: center;
   }
@@ -266,7 +300,9 @@
   &ServicesContentIcon {
     transform: translateX(-0.5rem);
     font-size: xxx-large;
-    padding-right: 1rem;
+    scale: 0.8;
+    margin: 0.2rem 0;
+    color: #fafafa;
   }
 
   &ServicesContentReview {
@@ -275,6 +311,7 @@
       margin: 2rem 5rem;
     }
 
+    border-radius: 0.3rem;
     padding: 0.8rem 2rem;
     margin: 1rem;
     font-family: monospace;
@@ -283,25 +320,34 @@
     color: $black;
     background-color: $white;
     outline: 2px inset $signYellow;
-    border-radius: 0.3rem;
   }
 
   &ServicesEsp {
-    padding: 1rem 0 1.5rem;
+    padding: 1rem 1rem 1.5rem;
     text-align: center;
   }
 
   &ServicesEsp {
     font-size: medium;
+    letter-spacing: 0.1rem;
   }
 
   &ServicesEspTextCaps {
     text-transform: uppercase;
   }
 
-  &TireTracks {
-    font-size: 4rem;
-    margin: 0 0.5rem;
-    color: $signBlue;
+  &ServicesMid {
+    @include mq(m600) {
+      border: solid #fafafadf 2rem;
+    }
+
+    border: solid #fafafadf 1rem;
+    width: 100%;
   }
+
+  // &TireTracks {
+  //   font-size: 4rem;
+  //   margin: 0 0.5rem;
+  //   color: $signBlue;
+  // }
 }

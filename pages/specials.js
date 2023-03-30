@@ -15,7 +15,13 @@ const specials = () => {
               CLC Tires <br />
               --coupon--
             </h1>
-            <Image width={50} height={50} src={tire} alt="wheel"></Image>
+            <Image
+              className={styles.specialsWheel1}
+              width={50}
+              height={50}
+              src={tire}
+              alt="wheel"
+            ></Image>
             <h2>4 tire Discount</h2>
             <h2>
               Show us this advertisement <br />
@@ -24,8 +30,38 @@ const specials = () => {
               <br />
             </h2>
             <h3>These specific tires at this discount</h3>
-            <p>(When in stock)</p>
+            <p>(While supplies last)</p>
           </div>
+        </div>
+        <div className={styles.specialsImgs}>
+          <Image
+            className={styles.specialsWheel}
+            width={25}
+            height={25}
+            src={tire}
+            alt="wheel"
+          ></Image>
+          <Image
+            className={styles.specialsWheel}
+            width={25}
+            height={25}
+            src={tire}
+            alt="wheel"
+          ></Image>
+          <Image
+            className={styles.specialsWheel}
+            width={25}
+            height={25}
+            src={tire}
+            alt="wheel"
+          ></Image>
+          <Image
+            className={styles.specialsWheel}
+            width={25}
+            height={25}
+            src={tire}
+            alt="wheel"
+          ></Image>
         </div>
       </Layout>
     </>
