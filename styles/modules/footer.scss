@@ -13,7 +13,11 @@
   }
 
   &Copy {
-    font-size: x-small;
+    @include mq(m900) {
+      font-size: x-small;
+    }
+
+    font-size: xx-small;
     margin-top: 4rem;
 
     & a {
