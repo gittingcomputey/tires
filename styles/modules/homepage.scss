@@ -35,6 +35,14 @@
 
   &Wheel {
     @include mq(m600) {
+      font-size: 2.5rem;
+    }
+
+    @include mq(m1200) {
+      font-size: 2.8rem;
+    }
+
+    @include mq(m1600) {
       font-size: 3rem;
     }
 
@@ -47,6 +55,14 @@
 
   &Word {
     @include mq(m600) {
+      font-size: 2.5rem;
+    }
+
+    @include mq(m1200) {
+      font-size: 2.8rem;
+    }
+
+    @include mq(m1600) {
       font-size: 3rem;
     }
 
@@ -78,6 +94,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    margin-bottom: 3rem;
   }
 
   &TeaserFloatText {
@@ -100,11 +117,10 @@
       background-color: #fafafaeb;
       padding: 1.5rem 5rem;
       transition: 0.4s ease-in-out;
-      font-size: x-large;
+      // border: solid red 2rem;
 
       &:hover {
         background-color: $shadow--bitless;
-        cursor: none;
         color: white;
       }
 
@@ -126,10 +142,6 @@
     font-size: large;
     font-family: "Gruppo", sans-serif;
     padding: 2rem 1rem;
-  }
-
-  &Inner {
-    // filter: opacity(1);
   }
 
   &TeaserBox {
@@ -175,7 +187,6 @@
     @include mq(m600) {
       padding: 0.5rem;
       width: 64%;
-      margin-bottom: 0;
       filter: drop-shadow(0.4rem 0.4rem $black);
     }
 
@@ -200,15 +211,18 @@
     @include mq(m1200) {
       border-top: solid $shadow 3rem;
       padding: 6rem 0.7rem;
-      row-gap: 6rem;
+      row-gap: 4rem;
       border-top: solid $white 0.7rem;
     }
 
     background-image: radial-gradient(
-      circle farthest-corner at 120.3% 71.5%,
-      rgba(83, 138, 214, 1) 0%,
-      rgba(134, 231, 214, 1) 90%
-    );
+        circle farthest-corner at 120.3% 71.5%,
+        rgba(83, 138, 214, 1) 0%,
+        rgba(134, 231, 214, 0.97) 90%
+      ),
+      url("../../public/tireTrack.png");
+    background-position: left;
+    background-attachment: fixed;
     color: $shadow;
     display: grid;
     grid-template-columns: 1fr;
@@ -344,10 +358,4 @@
     border: solid #fafafadf 1rem;
     width: 100%;
   }
-
-  // &TireTracks {
-  //   font-size: 4rem;
-  //   margin: 0 0.5rem;
-  //   color: $signBlue;
-  // }
 }
