@@ -137,8 +137,8 @@ export default function Home() {
                   -CU
                 </p>
                 <p className={styles.homeServicesContentReview}>
-                  Really friendly and super helpful when I said I didn't know
-                  how to buy brake pads. -ARG
+                  Really friendly and super helpful when I said I didn&apos;t
+                  know how to buy brake pads. -ARG
                 </p>
                 <p className={styles.homeServicesContentReview}>
                   By chance on the corner of Nordhoff and Sepulveda I made a u
