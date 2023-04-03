@@ -99,13 +99,13 @@
 
   &TeaserFloatText {
     @include mq(m600) {
-      padding: 4rem 2rem;
+      padding: 1rem;
       color: black;
       font-size: x-large;
     }
 
     @include mq(m900) {
-      padding: 4rem 8rem;
+      padding: 4rem 6rem;
       font-size: x-large;
     }
 
@@ -139,9 +139,9 @@
     background-color: #fafafaeb;
     color: black;
     font-size: large;
-    line-height: 2.2rem;
+    line-height: 2rem;
     font-family: "Gruppo", sans-serif;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.4rem;
   }
 
   &TeaserBox {
