@@ -5,26 +5,31 @@
     }
 
     background-color: black;
-    padding: 1rem 0;
+    padding: 0;
     color: $white;
     text-align: center;
     font-family: "Red Hat Mono", sans-serif;
+    @include lookBorder();
   }
 
   &Headline {
     @include mq(m900) {
       font-size: medium;
     }
-
     font-size: small;
   }
 
   &Info {
+    @include mq(m600) {
+      font-size: medium;
+    }
+
     @include mq(m900) {
       font-size: large;
     }
 
-    font-size: medium;
+    @include lookBorderGreen();
+    font-size: small;
   }
 
   &Copy {
