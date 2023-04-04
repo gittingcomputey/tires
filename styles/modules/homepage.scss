@@ -99,7 +99,7 @@
 
   &TeaserFloatText {
     @include mq(m600) {
-      padding: 1rem;
+      padding: 1rem 2rem;
       color: black;
       font-size: x-large;
     }
@@ -337,6 +337,10 @@
   &ServicesContentReview {
     @include mq(m900) {
       font-size: large;
+      margin: 2rem 7rem;
+    }
+
+    @include mq(m1200) {
       margin: 2rem 5rem;
     }
 
