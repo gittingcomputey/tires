@@ -8,7 +8,10 @@
     padding: 0;
     color: $white;
     text-align: center;
-    font-family: "Red Hat Mono", sans-serif;
+    font-family: "Goldman", "Red Hat Mono", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &Headline {
@@ -32,14 +35,18 @@
 
   &Copy {
     @include mq(m900) {
-      font-size: x-small;
+      font-size: 0.7rem;
     }
 
-    font-size: xx-small;
-    padding-top: 4rem;
+    @include mq(m900) {
+      font-size: x-small;
+      padding-top: 4rem;
+    }
 
+    font-size: 0.5rem;
+    color: $lightgrey;
     & a {
-      color: #fafafa;
+      color: $lightgrey;
     }
   }
 }
