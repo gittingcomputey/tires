@@ -4,9 +4,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
-      <div>
-        <h3>CLC TIRES</h3>
-        <h4>
+      <div className={styles.footerBox}>
+        <h3 className={styles.footerHeadline}>CLC TIRES</h3>
+        <h4 className={styles.footerInfo}>
           <Link href="tel:8185218163">818-830-5189</Link> <br />
           15412 Nordhoff St <br />
           North Hills, CA 91343 <br /> <br />

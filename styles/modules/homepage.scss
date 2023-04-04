@@ -81,7 +81,7 @@
     }
 
     @include mq(m1600) {
-      grid-template-columns: 40% 40%;
+      grid-template-columns: 45% 45%;
       min-height: 74vh;
     }
 
@@ -94,7 +94,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   &TeaserFloatText {
@@ -164,37 +164,52 @@
   }
 
   &TeaserData {
-    @include mq(m600) {
-      padding: 0.2rem 2rem;
+    @include mq(1200) {
+      font-size: xx-large;
     }
 
-    padding: 0.2rem;
-    font-size: large;
+    font-family: monospace;
+    color: $shadow;
+    font-size: x-large;
   }
 
   &TeaserImg {
     @include mq(m600) {
       width: 64%;
-      margin-top: 0;
+    }
+
+    @include mq(m900) {
+      width: 50%;
+    }
+
+    @include mq(m1200) {
+      width: 68%;
     }
 
     margin-top: 2rem;
     filter: contrast(140%);
-    width: 100%;
+    width: 90%;
   }
 
   &TeaserAddyBox {
     @include mq(m600) {
-      padding: 0.5rem;
       width: 64%;
       filter: drop-shadow(0.4rem 0.4rem $black);
+    }
+
+    @include mq(m900) {
+      width: 50%;
+    }
+
+    @include mq(m1200) {
+      width: 68%;
     }
 
     margin-bottom: 1.8rem;
     background-color: #fafafa;
     margin-top: 2rem;
     color: $black;
-    width: 100%;
+    width: 90%;
   }
 
   &AddyButton {

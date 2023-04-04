@@ -9,7 +9,22 @@
     color: $white;
     text-align: center;
     font-family: "Red Hat Mono", sans-serif;
+  }
+
+  &Headline {
+    @include mq(m900) {
+      font-size: medium;
+    }
+
     font-size: small;
+  }
+
+  &Info {
+    @include mq(m900) {
+      font-size: large;
+    }
+
+    font-size: medium;
   }
 
   &Copy {
