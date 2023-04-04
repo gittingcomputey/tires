@@ -280,6 +280,7 @@
       font-size: xx-large;
     }
 
+    font-size: large;
     text-transform: uppercase;
     font-family: "Red Hat Mono", sans-serif;
     text-shadow: 0.02rem 0.02rem 0.1rem #fafafab7;
@@ -340,12 +341,20 @@
   }
 
   &ServicesContentReview {
+    @include mq(m350) {
+      font-size: medium;
+    }
+
+    @include mq(m600) {
+      margin: 2rem 3rem;
+    }
+
     @include mq(m900) {
-      font-size: large;
-      margin: 2rem 7rem;
+      margin: 2rem 8rem;
     }
 
     @include mq(m1200) {
+      font-size: large;
       margin: 2rem 5rem;
     }
 
@@ -353,7 +362,7 @@
     padding: 0.8rem 2rem;
     margin: 1rem;
     font-family: monospace;
-    font-size: medium;
+    font-size: small;
     font-style: italic;
     color: $black;
     background-color: $white;
