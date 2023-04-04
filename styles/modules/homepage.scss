@@ -327,10 +327,14 @@
   }
 
   &ServicesContentIcon {
-    transform: translateX(-0.5rem);
+    @include mq(m1200) {
+      scale: 0.9;
+      transform: translateX(-0.5rem);
+    }
+
+    transform: translateX(-0.7rem);
     font-size: xxx-large;
-    // scale: 0.8;
-    margin: 0.2rem 0;
+    padding: 0.3rem 0;
     color: #fafafa;
   }
 
