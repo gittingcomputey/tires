@@ -9,7 +9,6 @@
     color: $white;
     text-align: center;
     font-family: "Red Hat Mono", sans-serif;
-    @include lookBorder();
   }
 
   &Headline {
@@ -28,7 +27,6 @@
       font-size: large;
     }
 
-    @include lookBorderGreen();
     font-size: small;
   }
 
