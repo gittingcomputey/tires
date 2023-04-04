@@ -328,10 +328,12 @@
 
   &ServicesContentIcon {
     @include mq(m1200) {
-      scale: 0.9;
-      transform: translateX(-0.5rem);
+      height: 3rem;
+      width: 3rem;
     }
 
+    min-height: 1rem;
+    min-width: 1rem;
     transform: translateX(-0.7rem);
     font-size: xxx-large;
     padding: 0.3rem 0;
