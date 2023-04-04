@@ -305,8 +305,9 @@
     justify-content: center;
     flex-direction: column;
     list-style-type: none;
+    gap: 0.5rem;
     filter: contrast(180%) brightness(100%);
-    margin: 1rem;
+    // margin: 1rem;
   }
 
   &ServicesContentLI {
@@ -328,15 +329,13 @@
 
   &ServicesContentIcon {
     @include mq(m1200) {
-      min-height: 3rem;
-      min-width: 3rem;
+      font-size: xxx-large;
     }
 
     min-height: 1rem;
     min-width: 1rem;
     transform: translateX(-0.7rem);
-    font-size: xxx-large;
-    padding: 0.3rem 0;
+    font-size: x-large;
     color: #fafafa;
   }
 
