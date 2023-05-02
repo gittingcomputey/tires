@@ -6,8 +6,6 @@
 
     font-family: 'Rubik Distressed', sans-serif;
 
-    font-family: 'Rubik Mono One', sans-serif;
-
     font-family: 'VT323', monospace;
 
     font-family: "Stalinist One", sans-serif;
@@ -26,6 +24,7 @@
 @import "./modules/footer.scss";
 @import "./modules/nav.scss";
 @import "./modules/specials.scss";
+@import "./modules/faq.scss";
 
 .container {
   padding: 0;

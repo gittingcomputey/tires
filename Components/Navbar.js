@@ -4,16 +4,33 @@ import styles from "../styles/Home.module.scss";
 import { useRouter } from "next/router";
 
 const Navbar = (props) => {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.naviWrapper}>
         <nav className={styles.naviContainer}>
-          <Link
-            className={styles.naviEach}
-            href={props.navTitle === "specials" ? "/specials" : "/"}
-          >
-            {props.navTitle}
-          </Link>
+          {router.pathname === "/" ? (
+            ""
+          ) : (
+            <Link className={styles.naviEach} href={"/"}>
+              Home
+            </Link>
+          )}
+          {router.pathname === "/faq" ? (
+            ""
+          ) : (
+            <Link className={styles.naviEach} href={"/faq"}>
+              FAQ
+            </Link>
+          )}
+          {router.pathname === "/specials" ? (
+            ""
+          ) : (
+            <Link className={styles.naviEach} href={"/specials"}>
+              Specials
+            </Link>
+          )}
         </nav>
       </div>
     </>

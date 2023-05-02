@@ -1,0 +1,55 @@
+.faq {
+  &Container {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(254, 253, 205, 1) 11.2%,
+      rgb(122, 204, 234) 91.1%
+    );
+  }
+
+  &Headline {
+    @include mq(m900) {
+      padding: 2rem 0 1.2rem;
+    }
+
+    font-size: large;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin: 0;
+    font-family: "Red Hat Mono", sans-serif;
+  }
+
+  &ContentBox {
+    @include mq(m1200) {
+      row-gap: 2rem;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 1.5rem;
+    font-family: "Gruppo", sans-serif;
+    align-items: center;
+  }
+
+  &QABox {
+    @include mq(m900) {
+      max-width: 55%;
+      padding: 3rem;
+      font-size: x-large;
+    }
+
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    font-size: large;
+    background-color: #fafafa;
+    border-radius: 0.3rem;
+    text-align: justify;
+  }
+}
