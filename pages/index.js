@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "../Components/Navbar";
 import Link from "next/link";
 
-import { GiTireTracks, GiTinker, GiTireIron, GiCarWheel } from "react-icons/gi";
+import { GiTireIron, GiCarWheel, GiPhone } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
 import { useEffect, useState } from "react";
 
@@ -58,7 +58,12 @@ export default function Home() {
                 <p className={styles.homeTeaserData}>
                   15412 Nordhoff St <br></br> North Hills, CA 91343
                 </p>
-                <p className={styles.homeTeaserData}>818-830-5189</p>
+                <p className={styles.homeTeaserData}>
+                  <span>
+                    <GiPhone className={styles.homeTeaserPhoneIcon} />
+                  </span>
+                  818-830-5189
+                </p>
                 <Link
                   target={"_blank"}
                   href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
@@ -71,19 +76,13 @@ export default function Home() {
 
           {/* services section */}
           <div id="services" className={styles.homeServicesContainer}>
-            <div
-              className={`${styles.homeServicesBox} ${styles.homeServicesBox1}`}
-            >
+            <div className={styles.homeServicesBox1}>
               <div className={styles.homeServicesMid}>
                 <div className={styles.homeServicesHeadlineBox}>
-                  <h2
-                    className={`${styles.homeServicesHeadline} ${styles.homeServicesHeadline1}`}
-                  >
-                    Services
-                  </h2>
+                  <h2 className={styles.homeServicesHeadline1}>Services</h2>
                 </div>
                 <div className={styles.homeServicesContentBox}>
-                  <div>
+                  <div className={styles.homeServicesULBox}>
                     <ul className={styles.homeServicesContentUL}>
                       <li>
                         <GiCarWheel
@@ -122,7 +121,9 @@ export default function Home() {
             </div>
             <div className={styles.homeServicesBox}>
               <div className={styles.homeServicesHeadlineBox}>
-                <h2 className={styles.homeServicesHeadline}>Appreciation</h2>
+                <h2 className={styles.homeServicesHeadline}>
+                  What our customers are saying
+                </h2>
               </div>
               <div className={styles.homeServicesContentBox}>
                 <p className={styles.homeServicesContentReview}>
@@ -137,8 +138,7 @@ export default function Home() {
                   -CU
                 </p>
                 <p className={styles.homeServicesContentReview}>
-                  Really friendly and super helpful when I said I didn&apos;t
-                  know how to buy brake pads. -ARG
+                  Really friendly and super helpful! -ARG
                 </p>
                 <p className={styles.homeServicesContentReview}>
                   By chance on the corner of Nordhoff and Sepulveda I made a u

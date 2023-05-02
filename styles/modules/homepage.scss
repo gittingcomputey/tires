@@ -75,17 +75,20 @@
 
   &TeaserContainer {
     @include mq(m1200) {
-      grid-template-columns: 45% 45%;
+      grid-template-columns: 1fr 1fr;
       justify-content: space-around;
-      padding: 2rem;
+      padding: 2rem 5rem;
+      gap: 2rem;
     }
 
     @include mq(m1600) {
-      grid-template-columns: 42% 42%;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
       min-height: 74vh;
+      padding: 3rem 10rem;
+      gap: 2rem;
     }
 
-    padding: 0;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -94,7 +97,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 1.5rem;
   }
 
   &TeaserFloatText {
@@ -112,7 +114,6 @@
     @include mq(m1200) {
       border-radius: 0.7rem;
       line-height: 3.2rem;
-      height: 100%;
       font-size: x-large;
       background-color: #fafafaeb;
       padding: 1.5rem 5rem;
@@ -145,91 +146,82 @@
   }
 
   &TeaserBox {
-    @include mq(m600) {
-      border-radius: 0.3rem;
-      box-shadow: 0.2rem 0.1rem 0.5rem $shadow;
+    @include mq(m1200) {
+      padding: 0;
     }
 
+    // @include lookBorderBlue();
+    border-radius: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Goldman", sans-serif;
-    background-color: wheat;
-    opacity: 0.9;
-    height: 100%;
+    background-color: transparent;
     color: $blue;
     flex-direction: column;
     font-weight: 400;
     text-align: center;
-  }
-
-  &TeaserData {
-    @include mq(1200) {
-      font-size: xx-large;
-    }
-
-    font-family: "Red Hat Mono", monospace;
-    color: $shadow;
-    font-size: x-large;
-  }
-
-  &TeaserImg {
-    @include mq(m600) {
-      width: 64%;
-    }
-
-    @include mq(m900) {
-      width: 50%;
-    }
-
-    @include mq(m1200) {
-      width: 68%;
-    }
-
-    margin-top: 2rem;
-    filter: contrast(140%);
-    width: 90%;
+    padding: 2rem;
   }
 
   &TeaserAddyBox {
-    @include mq(m600) {
-      width: 64%;
-      filter: drop-shadow(0.4rem 0.4rem $black);
+    @include mq(m900) {
+      padding: 4rem;
     }
 
     @include mq(m900) {
-      width: 50%;
+      padding: 0;
     }
 
+    padding: 2rem;
+  }
+
+  &TeaserData {
     @include mq(m1200) {
-      width: 68%;
+      font-size: xx-large;
+      background-color: #fafafaef;
+      padding: 1rem 1.3rem;
     }
 
-    margin-bottom: 1.8rem;
-    background-color: #fafafa;
-    margin-top: 2rem;
-    color: $black;
-    width: 90%;
+    padding: 1rem;
+    background-color: #fafafad6;
+    font-family: "Red Hat Mono", monospace;
+    color: $blue;
+    font-size: large;
+    border-radius: 0.3rem;
+  }
+
+  &TeaserImg {
+    border-radius: 0.3rem;
+    filter: contrast(180%) brightness(95%);
+  }
+
+  &TeaserPhoneIcon {
+    padding-right: 0.2rem;
   }
 
   &AddyButton {
     font-family: serif;
     cursor: pointer;
     background-color: rgba(35, 35, 218, 0.732);
-    padding: 0.3rem 0.5rem;
+    padding: 0.5rem 1rem;
     color: #fafafa;
+    font-weight: 600;
     border: none;
-    margin-bottom: 0.3rem;
+    border-radius: 0.15rem;
+
+    &:hover {
+      background-color: rgba(35, 35, 218, 0.4);
+    }
   }
 
   &ServicesContainer {
     @include mq(m1200) {
-      border-top: solid $shadow 3rem;
       padding: 6rem 0.7rem;
-      row-gap: 4rem;
-      border-top: solid $white 0.7rem;
+      row-gap: 7rem;
     }
 
+    border-top: solid $white 0.7rem;
     background-image: radial-gradient(
         circle farthest-corner at 120.3% 71.5%,
         rgba(83, 138, 214, 1) 0%,
@@ -247,52 +239,45 @@
     padding: 0;
   }
 
-  &ServicesBox {
+  &ServicesBox1 {
     @include mq(m1200) {
       width: 50%;
       padding: 2rem;
+      justify-self: center;
     }
 
-    width: 100%;
-    justify-self: center;
-    background-color: azure;
-    box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
-  }
-
-  &ServicesBox1 {
     background-image: url("../../public/tires-robert-laursoo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9;
     filter: brightness(90%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &ServicesMid {
+    @include mq(m600) {
+      border: solid #fafafadf 2rem;
+    }
+
+    display: grid;
+    border: solid #fafafadf 1rem;
+    width: 100%;
   }
 
   &ServicesHeadlineBox {
     text-align: center;
-  }
-
-  &ServicesHeadline {
-    @include mq(m900) {
-      font-size: xx-large;
-    }
-
-    font-size: large;
-    text-transform: uppercase;
-    font-family: "Red Hat Mono", sans-serif;
-    text-shadow: 0.02rem 0.02rem 0.1rem #fafafab7;
-    font-weight: 600;
-    margin: 1rem;
+    padding: 1rem;
   }
 
   &ServicesHeadline1 {
-    @include mq(m600) {
+    @include mq(m900) {
       font-size: xxx-large;
     }
 
+    font-family: "VT323", monospace;
+    margin: 0;
     color: rgba(83, 138, 214, 1);
     font-size: xx-large;
     text-shadow: 0.1rem 0.1rem 0 $signYellow;
@@ -300,31 +285,30 @@
     text-align: center;
   }
 
+  &ServicesULBox {
+    padding: 0 1rem;
+  }
+
   &ServicesContentUL {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     list-style-type: none;
-    gap: 0.5rem;
     filter: contrast(180%) brightness(100%);
-    // margin: 1rem;
+    padding: 0;
   }
 
   &ServicesContentLI {
     @include mq(m900) {
       font-size: medium;
+      width: 100%;
     }
 
+    margin: 0.5rem 0;
     color: $shadow;
     background-color: #fafafadf;
     letter-spacing: 0.3rem;
     font-size: small;
     font-family: "Stalinist One", sans-serif;
     text-transform: uppercase;
-    padding: 0.5rem 0;
-    width: 100%;
-    transform: translateX(-1rem);
+    padding: 0.5rem;
     text-align: center;
   }
 
@@ -333,11 +317,22 @@
       font-size: xxx-large;
     }
 
+    text-align: center;
     min-height: 1rem;
     min-width: 1rem;
-    transform: translateX(-0.7rem);
     font-size: x-large;
     color: #fafafa;
+  }
+
+  &ServicesBox {
+    @include mq(m1200) {
+      width: 50%;
+      padding: 2rem;
+      justify-self: center;
+    }
+
+    background-color: azure;
+    box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
   }
 
   &ServicesContentReview {
@@ -355,10 +350,9 @@
 
     @include mq(m1200) {
       font-size: large;
-      margin: 2rem 5rem;
     }
 
-    border-radius: 0.3rem;
+    border-radius: 0.7rem;
     padding: 0.8rem 2rem;
     margin: 1rem;
     font-family: monospace;
@@ -369,26 +363,32 @@
     outline: 2px inset $signYellow;
   }
 
-  &ServicesEsp {
-    padding: 1rem 1rem 1.5rem;
-    text-align: center;
+  &ServicesHeadline {
+    @include mq(m900) {
+      font-size: large;
+      // margin: 1rem;
+    }
+
+    font-size: small;
+    text-transform: uppercase;
+    font-family: "Red Hat Mono", sans-serif;
+    letter-spacing: 0.2rem;
+    color: rgba(26, 86, 170, 0.773);
+    text-shadow: 0.1rem 0.1rem 0 $signYellow;
   }
 
   &ServicesEsp {
-    font-size: medium;
+    @include mq(900) {
+      font-size: medium;
+    }
+
+    font-size: x-small;
+    padding: 1rem 1rem 1.5rem;
+    text-align: center;
     letter-spacing: 0.1rem;
   }
 
   &ServicesEspTextCaps {
     text-transform: uppercase;
-  }
-
-  &ServicesMid {
-    @include mq(m600) {
-      border: solid #fafafadf 2rem;
-    }
-
-    border: solid #fafafadf 1rem;
-    width: 100%;
   }
 }
