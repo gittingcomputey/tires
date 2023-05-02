@@ -17,6 +17,10 @@
   }
 
   &VidContainer {
+    @include mq(m750land) {
+      overflow: scroll;
+    }
+
     @include mq(m900) {
       height: 90vh;
     }

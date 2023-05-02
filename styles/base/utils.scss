@@ -27,8 +27,20 @@
     }
   }
 
+  @if $breakpoint == m600land {
+    @media (min-width: 37.5em) and (orientation: landscape) {
+      @content;
+    }
+  }
+
   @if $breakpoint == m750 {
     @media (min-width: 46.875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m750land {
+    @media (min-width: 46.875em) and (orientation: landscape) {
       @content;
     }
   }
