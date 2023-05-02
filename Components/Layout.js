@@ -20,7 +20,7 @@ const Layout = ({ title, keywords, description, children }) => {
         ></link>
       </Head>
 
-      <main className={styles.mainContainer}>{children}</main>
+      <main className={styles.mainSiteContainer}>{children}</main>
 
       <Footer />
     </div>

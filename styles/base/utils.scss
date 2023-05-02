@@ -27,6 +27,12 @@
     }
   }
 
+  @if $breakpoint == m750 {
+    @media (min-width: 46.875em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == m900 {
     @media (min-width: 56.25em) {
       @content;

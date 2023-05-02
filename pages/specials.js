@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import tire from "../public/tire-svg-1.png";
 import Image from "next/image";
 
-const specials = () => {
+const Specials = () => {
   return (
     <>
       <Layout>
@@ -77,4 +77,4 @@ const specials = () => {
   );
 };
 
-export default specials;
+export default Specials;

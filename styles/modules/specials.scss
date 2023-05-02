@@ -4,7 +4,7 @@
   }
 
   100% {
-    rotate: 0;
+    rotate: none;
   }
 }
 
@@ -107,7 +107,7 @@
 
   &Wheel {
     &:hover {
-      animation: wheels 0.3s ease-in;
+      animation: wheels 0.3s ease-in-out;
     }
   }
 }

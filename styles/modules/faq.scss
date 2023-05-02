@@ -1,22 +1,36 @@
 .faq {
   &Container {
+    @include mq(m600) {
+      background-image: linear-gradient(
+        109.6deg,
+        rgba(254, 253, 205, 1) 11.2%,
+        rgb(122, 204, 234) 91.1%
+      );
+    }
+
+    background-image: linear-gradient(
+      110.6deg,
+      rgba(254, 253, 205, 1) 11.2%,
+      rgb(122, 204, 234) 31.1%,
+      rgba(254, 253, 205, 1) 91.2%
+    );
     padding: 0 1rem 1rem;
     margin: 0;
-    background-image: linear-gradient(
-      109.6deg,
-      rgba(254, 253, 205, 1) 11.2%,
-      rgb(122, 204, 234) 91.1%
-    );
   }
 
   &Headline {
-    @include mq(m900) {
-      padding: 2rem 0 1.2rem;
+    @include mq(m600) {
+      font-size: large;
     }
 
-    font-size: large;
+    @include mq(m900) {
+      padding: 3rem 0;
+      font-size: x-large;
+    }
+
+    font-size: medium;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
     margin: 0;
     font-family: "Red Hat Mono", sans-serif;
   }
@@ -29,16 +43,28 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    row-gap: 1.5rem;
+    row-gap: 2.5rem;
     font-family: "Gruppo", sans-serif;
     align-items: center;
   }
 
   &QABox {
+    @include mq(m600) {
+      max-width: 95%;
+    }
+
+    @include mq(m750) {
+      max-width: 85%;
+    }
+
     @include mq(m900) {
+      max-width: 75%;
+      padding: 2.5rem;
+    }
+
+    @include mq(m1200) {
       max-width: 55%;
-      padding: 3rem;
-      font-size: x-large;
+      padding: 2.5rem;
     }
 
     justify-self: center;
@@ -46,10 +72,40 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    font-size: large;
-    background-color: #fafafa;
+    padding: 1rem;
+    font-weight: 600;
+    background-color: $shadow--light;
+    color: white;
     border-radius: 0.3rem;
+    filter: opacity(0.9);
+  }
+
+  &QuestionBox {
+    font-size: medium;
+    border-bottom: solid 0.1rem #fafafa8f;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    color: #b6eef8;
+  }
+
+  &AnswerBox {
+    padding-top: 0.5rem;
     text-align: justify;
+  }
+
+  &Question {
+    @include mq(m1200) {
+      font-size: xx-large;
+    }
+
+    font-size: large;
+  }
+
+  &Answer {
+    @include mq(m1200) {
+      font-size: x-large;
+    }
+
+    font-size: medium;
   }
 }
