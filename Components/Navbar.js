@@ -17,18 +17,20 @@ const Navbar = (props) => {
               Home
             </Link>
           )}
-          {router.pathname === "/faq" ? (
-            ""
-          ) : (
-            <Link className={styles.naviEach} href={"/faq"}>
-              FAQ
-            </Link>
-          )}
+
           {router.pathname === "/specials" ? (
             ""
           ) : (
             <Link className={styles.naviEach} href={"/specials"}>
               Specials
+            </Link>
+          )}
+
+          {router.pathname === "/faq" ? (
+            ""
+          ) : (
+            <Link className={styles.naviEach} href={"/faq"}>
+              FAQ
             </Link>
           )}
         </nav>
