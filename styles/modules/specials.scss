@@ -17,7 +17,7 @@
   }
 
   &VidContainer {
-    @include mq(m750land) {
+    @include mq(m350land) {
       height: 200vh;
     }
 
