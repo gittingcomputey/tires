@@ -17,10 +17,13 @@
   }
 
   &VidContainer {
+    @include mq(m900) {
+      height: 90vh;
+    }
+
     position: relative;
-    height: 90vh;
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 
     & video {
@@ -35,27 +38,25 @@
   }
 
   &HeadlineContainer {
-    @include mq(m900) {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 100%;
   }
 
   &HeadlineBox {
+    @include mq(m750) {
+      padding: 6rem 4rem;
+    }
+
     @include mq(m900) {
       padding: 5rem 5rem;
       opacity: 0.95;
       width: 55%;
+      min-height: none;
     }
 
-    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,8 +69,9 @@
       rgb(251, 251, 251) 67.4%
     );
     color: black;
-    opacity: 0.9;
+    opacity: 0.8;
     border-radius: 0.3rem;
+    min-height: 75%;
   }
 
   &Headline {

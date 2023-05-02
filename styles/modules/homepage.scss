@@ -184,7 +184,7 @@
   }
 
   &TeaserImg {
-    @include mq(m750) {
+    @include mq(m600) {
       width: 450px;
       height: 300px;
     }

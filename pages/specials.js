@@ -32,7 +32,6 @@ const Specials = () => {
                 <h2>4 tire Discount</h2>
                 <h2>
                   Show us this advertisement <br />
-                  on your mobile <br />
                   to redeem coupon
                   <br />
                 </h2>
