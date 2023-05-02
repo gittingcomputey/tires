@@ -150,11 +150,11 @@
       padding: 0;
     }
 
-    // @include lookBorderBlue();
+    overflow: hidden;
+
     border-radius: 0.3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-family: "Goldman", sans-serif;
     background-color: transparent;
     color: $blue;
@@ -165,22 +165,14 @@
   }
 
   &TeaserAddyBox {
-    @include mq(m900) {
-      padding: 4rem;
-    }
-
-    @include mq(m900) {
-      padding: 0;
-    }
-
-    padding: 2rem;
+    padding: 0;
   }
 
   &TeaserData {
     @include mq(m1200) {
       font-size: x-large;
       background-color: #fafafaef;
-      padding: 1rem 2rem;
+      margin: 1.3rem 0;
     }
 
     padding: 1rem;
@@ -192,8 +184,14 @@
   }
 
   &TeaserImg {
+    @include mq(m750) {
+      width: 450px;
+      height: 300px;
+    }
+
+    width: 300px;
+    height: 200px;
     border-radius: 0.3rem;
-    filter: contrast(180%) brightness(95%);
   }
 
   &TeaserPhoneIcon {

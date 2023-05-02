@@ -9,14 +9,6 @@ import { BiBandAid } from "react-icons/bi";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  // const [width, setWidth] = useState(
-  //   typeof window !== "undefined" ? window.innerWidth : 0
-  // );
-
-  // useEffect(() => {
-  //   setWidth(window.innerWidth);
-  // }, [window.innerWidth]);
-
   return (
     <>
       <Layout>
@@ -49,9 +41,9 @@ export default function Home() {
             <div className={styles.homeTeaserBox}>
               <Image
                 className={styles.homeTeaserImg}
-                src="/clc_map.png"
-                width="260"
-                height="260"
+                src="/clc_map3.png"
+                width="967"
+                height="661"
                 alt="clc location map"
               />
               <div className={styles.homeTeaserAddyBox}>
