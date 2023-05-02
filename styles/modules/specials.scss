@@ -55,10 +55,14 @@
     }
 
     @include mq(m900) {
-      padding: 5rem 5rem;
+      padding: 1rem 5rem;
       opacity: 0.95;
       width: 55%;
       min-height: none;
+    }
+
+    @include mq(m1600) {
+      padding: 5rem;
     }
 
     display: flex;
