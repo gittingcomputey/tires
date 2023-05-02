@@ -54,7 +54,7 @@ export default function Home() {
                   <span>
                     <GiPhone className={styles.homeTeaserPhoneIcon} />
                   </span>
-                  818-830-5189
+                  <Link href="tel:8185218163">818-830-5189</Link>
                 </p>
                 <Link
                   target={"_blank"}
