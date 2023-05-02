@@ -106,6 +106,10 @@
       font-size: x-large;
     }
 
+    @include mq(m750) {
+      padding: 3rem 4rem;
+    }
+
     @include mq(m900) {
       padding: 4rem 6rem;
       font-size: x-large;
@@ -185,6 +189,16 @@
 
   &TeaserImg {
     @include mq(m600) {
+      width: 450px;
+      height: 300px;
+    }
+
+    @include mq(m1200) {
+      width: 350px;
+      height: 225px;
+    }
+
+    @include mq(m1600) {
       width: 450px;
       height: 300px;
     }
