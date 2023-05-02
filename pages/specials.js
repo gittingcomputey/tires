@@ -9,59 +9,68 @@ const specials = () => {
     <>
       <Layout>
         <Navbar navTitle="home" />
-        <div className={styles.specialsHeadlineContainer}>
-          <div className={styles.specialsHeadlineBox}>
-            <h1 className={styles.specialsHeadline}>
-              CLC Tires <br />
-              --coupon--
-            </h1>
+        <div className={styles.specialsMainContainer}>
+          <div className={styles.specialsVidContainer}>
+            <video playsInline autoPlay muted loop>
+              <source src="tires-DanCristianP.mp4" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div className={styles.specialsHeadlineContainer}>
+              <div className={styles.specialsHeadlineBox}>
+                <h1 className={styles.specialsHeadline}>
+                  CLC Tires <br />
+                  coupon
+                </h1>
+                <Image
+                  className={styles.specialsWheel1}
+                  width={50}
+                  height={50}
+                  src={tire}
+                  alt="wheel"
+                ></Image>
+                <h2>4 tire Discount</h2>
+                <h2>
+                  Show us this advertisement <br />
+                  on your mobile <br />
+                  to redeem coupon
+                  <br />
+                </h2>
+                <h3>These specific tires at this discount</h3>
+                <p>(While supplies last)</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.specialsImgs}>
             <Image
-              className={styles.specialsWheel1}
-              width={50}
-              height={50}
+              className={styles.specialsWheel}
+              width={25}
+              height={25}
               src={tire}
               alt="wheel"
             ></Image>
-            <h2>4 tire Discount</h2>
-            <h2>
-              Show us this advertisement <br />
-              on your mobile <br />
-              to redeem coupon
-              <br />
-            </h2>
-            <h3>These specific tires at this discount</h3>
-            <p>(While supplies last)</p>
+            <Image
+              className={styles.specialsWheel}
+              width={25}
+              height={25}
+              src={tire}
+              alt="wheel"
+            ></Image>
+            <Image
+              className={styles.specialsWheel}
+              width={25}
+              height={25}
+              src={tire}
+              alt="wheel"
+            ></Image>
+            <Image
+              className={styles.specialsWheel}
+              width={25}
+              height={25}
+              src={tire}
+              alt="wheel"
+            ></Image>
           </div>
-        </div>
-        <div className={styles.specialsImgs}>
-          <Image
-            className={styles.specialsWheel}
-            width={25}
-            height={25}
-            src={tire}
-            alt="wheel"
-          ></Image>
-          <Image
-            className={styles.specialsWheel}
-            width={25}
-            height={25}
-            src={tire}
-            alt="wheel"
-          ></Image>
-          <Image
-            className={styles.specialsWheel}
-            width={25}
-            height={25}
-            src={tire}
-            alt="wheel"
-          ></Image>
-          <Image
-            className={styles.specialsWheel}
-            width={25}
-            height={25}
-            src={tire}
-            alt="wheel"
-          ></Image>
         </div>
       </Layout>
     </>
