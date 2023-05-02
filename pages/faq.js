@@ -58,10 +58,11 @@ const faq = () => {
                 </div>
                 <div className={styles.faqAnswerBox}>
                   The proper air pressure for your tires can usually be found in
-                  your vehicle's owner's manual or on a sticker located on the
-                  driver's side door jamb. It's important to check your tire
-                  pressure regularly, as underinflated or overinflated tires can
-                  cause handling and safety issues.
+                  your vehicle&apos;s owner&apos;s manual or on a sticker
+                  located on the driver&apos;s side door jamb. It&apos;s
+                  important to check your tire pressure regularly, as
+                  underinflated or overinflated tires can cause handling and
+                  safety issues.
                 </div>
               </div>
 
@@ -94,10 +95,10 @@ const faq = () => {
                   Should I replace all four tires at once?
                 </div>
                 <div className={styles.faqAnswerBox}>
-                  It's recommended that you replace all four tires at once, as
-                  mixing new and worn tires can cause handling and safety
+                  It&apos;s recommended that you replace all four tires at once,
+                  as mixing new and worn tires can cause handling and safety
                   issues. However, if your tires are relatively new and only one
-                  tire needs to be replaced due to damage, it's usually
+                  tire needs to be replaced due to damage, it&apos;s usually
                   acceptable to replace just the damaged tire.
                 </div>
               </div>
