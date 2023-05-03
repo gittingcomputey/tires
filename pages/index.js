@@ -6,7 +6,6 @@ import Link from "next/link";
 
 import { GiTireIron, GiCarWheel, GiPhone } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   return (
@@ -113,41 +112,43 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={styles.homeServicesBox}>
-              <div className={styles.homeServicesHeadlineBox}>
-                <h2 className={styles.homeServicesHeadline}>
-                  What our customers are saying
-                </h2>
-              </div>
-              <div className={styles.homeServicesContentBox}>
-                <p className={styles.homeServicesContentReview}>
-                  I had a tire pop on the freeway and needed a replacement
-                  quick! I knew CLC was the place to go to for a used tire that
-                  could get me back on the road at a reasonable price. I was
-                  back on the road in a quick minute! -JZ
-                </p>
-                <p className={styles.homeServicesContentReview}>
-                  Sergio and the rest of the team never lag to help a girl out
-                  in need when she pops a tire or has another nail in the benz.
-                  -CU
-                </p>
-                <p className={styles.homeServicesContentReview}>
-                  Really friendly and super helpful! -ARG
-                </p>
-                <p className={styles.homeServicesContentReview}>
-                  By chance on the corner of Nordhoff and Sepulveda I made a u
-                  turn and I found an awesome place. -CDA
-                </p>
-              </div>
-              <div className={styles.homeServicesEsp}>
-                <div className={styles.homeServicesEspBox}>
-                  <h3 className={styles.homeServicesEspText}>
-                    <span className={styles.homeServicesEspTextCaps}>
-                      Se habla español.
-                    </span>{" "}
-                    Vendemos llantas, nuevas y usadas. <br />
-                    Ubicados en North Hills, en el valle de San Fernando.
-                  </h3>
+            <div className={styles.homeServicesDivider}>
+              <div className={styles.homeServicesBox}>
+                <div className={styles.homeServicesHeadlineBox}>
+                  <h2 className={styles.homeServicesHeadline2}>
+                    What customers are saying
+                  </h2>
+                </div>
+                <div className={styles.homeServicesContentBox}>
+                  <p className={styles.homeServicesContentReview}>
+                    I had a tire pop on the freeway and needed a replacement
+                    quick! I knew CLC was the place to go to for a tire that
+                    could get me back on the road at a reasonable price. I was
+                    back on the road in a quick minute! -JZ
+                  </p>
+                  <p className={styles.homeServicesContentReview}>
+                    By chance on the corner of Nordhoff and Sepulveda I made a u
+                    turn and I found an awesome place. -CDA
+                  </p>
+                  <p className={styles.homeServicesContentReview}>
+                    Sergio and the rest of the team never lag to help a girl out
+                    in need when she pops a tire or has another nail in the
+                    benz. -CU
+                  </p>
+                  <p className={styles.homeServicesContentReview}>
+                    Really friendly and super helpful! -ARG
+                  </p>
+                </div>
+                <div className={styles.homeServicesEsp}>
+                  <div className={styles.homeServicesEspBox}>
+                    <h3 className={styles.homeServicesEspText}>
+                      <span className={styles.homeServicesEspTextCaps}>
+                        Se habla español. <br />
+                      </span>{" "}
+                      Vendemos llantas, nuevas y usadas. <br />
+                      Ubicados en North Hills, en el valle de San Fernando.
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>

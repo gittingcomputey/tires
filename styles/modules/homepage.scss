@@ -7,7 +7,7 @@
   }
 
   &HeroBox {
-    height: 93.5;
+    height: 94vh;
   }
 
   &HeadlineContainer {
@@ -88,7 +88,7 @@
     @include mq(m1600) {
       grid-template-columns: 1fr 1fr;
       justify-content: space-between;
-      min-height: 74vh;
+      // min-height: 74vh;
       padding: 3rem 10rem;
       gap: 2rem;
     }
@@ -107,7 +107,6 @@
     @include mq(m600) {
       padding: 1rem 2rem;
       color: black;
-      font-size: x-large;
     }
 
     @include mq(m750) {
@@ -122,7 +121,6 @@
     @include mq(m1200) {
       border-radius: 0.7rem;
       line-height: 3.2rem;
-      font-size: x-large;
       background-color: #fafafaeb;
       padding: 1.5rem 5rem;
       transition: 0.4s ease-in-out;
@@ -178,15 +176,15 @@
 
   &TeaserData {
     @include mq(m1200) {
-      font-size: x-large;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
       background-color: #fafafaef;
-      margin: 1.3rem 0;
     }
 
-    padding: 1rem;
+    padding: 1rem 2rem;
     background-color: #fafafad6;
     font-family: "Red Hat Mono", monospace;
-    color: $blue;
+    color: $signBlueBlack;
     font-size: large;
     border-radius: 0.3rem;
   }
@@ -207,13 +205,23 @@
       height: 300px;
     }
 
+    &:hover {
+      cursor: zoom-in;
+    }
+
+    &:active {
+      scale: (1.8);
+      box-shadow: 0.2rem 0.2rem $signBlue;
+    }
+
     width: 300px;
     height: 200px;
     border-radius: 0.3rem;
   }
 
   &TeaserPhoneIcon {
-    padding-right: 0.2rem;
+    margin-right: 0.2rem;
+    font-size: large;
   }
 
   &AddyButton {
@@ -233,7 +241,7 @@
 
   &ServicesContainer {
     @include mq(m1200) {
-      padding: 6rem 0.7rem;
+      padding: 6rem 0.7rem 0;
       row-gap: 7rem;
     }
 
@@ -342,26 +350,26 @@
 
   &ServicesBox {
     @include mq(m1200) {
-      width: 50%;
-      padding: 2rem;
+      width: 40%;
       justify-self: center;
     }
 
+    padding: 2rem 8rem;
+    border-radius: 0.7rem;
     background-color: azure;
     box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
+  }
+
+  &ServicesDivider {
+    background-color: #fafafa0f;
+    padding: 7rem 0;
+    display: flex;
+    justify-content: center;
   }
 
   &ServicesContentReview {
     @include mq(m350) {
       font-size: medium;
-    }
-
-    @include mq(m600) {
-      margin: 2rem 3rem;
-    }
-
-    @include mq(m900) {
-      margin: 2rem 8rem;
     }
 
     @include mq(m1200) {
@@ -370,7 +378,6 @@
 
     border-radius: 0.7rem;
     padding: 0.8rem 2rem;
-    margin: 1rem;
     font-family: monospace;
     font-size: small;
     font-style: italic;
@@ -379,10 +386,9 @@
     outline: 2px inset $signYellow;
   }
 
-  &ServicesHeadline {
+  &ServicesHeadline2 {
     @include mq(m900) {
-      font-size: large;
-      // margin: 1rem;
+      font-size: medium;
     }
 
     font-size: small;
