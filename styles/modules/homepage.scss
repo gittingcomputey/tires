@@ -6,6 +6,10 @@
     color: $signBlue;
   }
 
+  &HeroBox {
+    height: 93.5;
+  }
+
   &HeadlineContainer {
     @include mq(m600) {
       padding: 2rem 0.6rem 2rem 0.3rem;

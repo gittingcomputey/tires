@@ -14,54 +14,56 @@ export default function Home() {
       <Layout>
         <Navbar navTitle={"specials"} />
         <div className={styles.homeContainer}>
-          <div className={styles.homeHeadlineContainer}>
-            <div className={styles.homeHeadlineBox}>
-              <h1 className={styles.homeHeadline}>
-                <span className={styles.homeWheel}>CLC</span>
-                <span className={styles.homeWord}> Tires </span>
-              </h1>
+          <div className={styles.homeHeroBox}>
+            <div className={styles.homeHeadlineContainer}>
+              <div className={styles.homeHeadlineBox}>
+                <h1 className={styles.homeHeadline}>
+                  <span className={styles.homeWheel}>CLC</span>
+                  <span className={styles.homeWord}> Tires </span>
+                </h1>
+              </div>
             </div>
-          </div>
 
-          <div className={styles.homeTeaserContainer}>
-            <div className={styles.homeTeaserFloatText}>
-              <p className={styles.homeInner}>
-                CLC Tires has been servicing The San Fernando valley since 2003.
-                We offer a wide variety of new and used tires,
-                puncture-patching, and professional alignment. Friendly, fast,
-                and reliable service.
-              </p>
-              <p>
-                {" "}
-                A family-operated business located in North Hills, CA. Our
-                experienced team members are ready to help with all of your tire
-                needs.
-              </p>
-            </div>
-            <div className={styles.homeTeaserBox}>
-              <Image
-                className={styles.homeTeaserImg}
-                src="/clc_map3.png"
-                width="967"
-                height="661"
-                alt="clc location map"
-              />
-              <div className={styles.homeTeaserAddyBox}>
-                <p className={styles.homeTeaserData}>
-                  15412 Nordhoff St <br></br> North Hills, CA 91343
+            <div className={styles.homeTeaserContainer}>
+              <div className={styles.homeTeaserFloatText}>
+                <p className={styles.homeInner}>
+                  CLC Tires has been servicing The San Fernando valley since
+                  2003. We offer a wide variety of new and used tires,
+                  puncture-patching, and professional alignment. Friendly, fast,
+                  and reliable service.
                 </p>
-                <p className={styles.homeTeaserData}>
-                  <span>
-                    <GiPhone className={styles.homeTeaserPhoneIcon} />
-                  </span>
-                  <Link href="tel:8185218163">818-830-5189</Link>
+                <p>
+                  {" "}
+                  A family-operated business located in North Hills, CA. Our
+                  experienced team members are ready to help with all of your
+                  tire needs.
                 </p>
-                <Link
-                  target={"_blank"}
-                  href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
-                >
-                  <button className={styles.homeAddyButton}>OPEN MAP</button>
-                </Link>
+              </div>
+              <div className={styles.homeTeaserBox}>
+                <Image
+                  className={styles.homeTeaserImg}
+                  src="/clc_map3.png"
+                  width="967"
+                  height="661"
+                  alt="clc location map"
+                />
+                <div className={styles.homeTeaserAddyBox}>
+                  <p className={styles.homeTeaserData}>
+                    15412 Nordhoff St <br></br> North Hills, CA 91343
+                  </p>
+                  <p className={styles.homeTeaserData}>
+                    <span>
+                      <GiPhone className={styles.homeTeaserPhoneIcon} />
+                    </span>
+                    <Link href="tel:8185218163">818-830-5189</Link>
+                  </p>
+                  <Link
+                    target={"_blank"}
+                    href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
+                  >
+                    <button className={styles.homeAddyButton}>OPEN MAP</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
