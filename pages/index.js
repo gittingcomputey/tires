@@ -115,9 +115,7 @@ export default function Home() {
             <div className={styles.homeServicesDivider}>
               <div className={styles.homeServicesBox}>
                 <div className={styles.homeServicesHeadlineBox}>
-                  <h2 className={styles.homeServicesHeadline2}>
-                    What customers are saying
-                  </h2>
+                  <h2 className={styles.homeServicesHeadline2}>testimonials</h2>
                 </div>
                 <div className={styles.homeServicesContentBox}>
                   <p className={styles.homeServicesContentReview}>

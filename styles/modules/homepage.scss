@@ -7,7 +7,9 @@
   }
 
   &HeroBox {
-    height: 94vh;
+    @include mq(1200) {
+      min-height: 94vh;
+    }
   }
 
   &HeadlineContainer {
@@ -81,7 +83,7 @@
     @include mq(m1200) {
       grid-template-columns: 1fr 1fr;
       justify-content: space-around;
-      padding: 2rem 5rem;
+      padding: 2rem 3rem;
       gap: 2rem;
     }
 
@@ -105,20 +107,20 @@
 
   &TeaserFloatText {
     @include mq(m600) {
-      padding: 1rem 2rem;
+      padding: 2rem;
       color: black;
     }
 
     @include mq(m750) {
-      padding: 3rem 4rem;
+      padding: 3rem 6rem;
     }
 
     @include mq(m900) {
       padding: 4rem 6rem;
-      font-size: x-large;
     }
 
     @include mq(m1200) {
+      font-size: 1.2rem;
       border-radius: 0.7rem;
       line-height: 3.2rem;
       background-color: #fafafaeb;
@@ -148,7 +150,7 @@
     font-size: large;
     line-height: 2rem;
     font-family: "Gruppo", sans-serif;
-    padding: 1rem 1.4rem;
+    padding: 1.5rem;
   }
 
   &TeaserBox {
@@ -265,7 +267,6 @@
 
   &ServicesBox1 {
     @include mq(m1200) {
-      width: 50%;
       padding: 2rem;
       justify-self: center;
     }
@@ -349,20 +350,45 @@
   }
 
   &ServicesBox {
-    @include mq(m1200) {
-      width: 40%;
-      justify-self: center;
+    @include mq(m600) {
+      padding: 1rem 5rem;
     }
 
-    padding: 2rem 8rem;
-    border-radius: 0.7rem;
+    @include mq(m750) {
+      padding: 2rem 8rem;
+    }
+
+    @include mq(m1200) {
+      max-width: 45%;
+      justify-self: center;
+      border-radius: 0.7rem;
+      padding: 2rem 3rem;
+    }
+
+    @include mq(m1600) {
+      padding: 2rem 8rem;
+      max-width: 40%;
+    }
+
+    padding: 1rem;
     background-color: azure;
     box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
   }
 
   &ServicesDivider {
+    @include mq(m600) {
+      padding: 0.5rem 0;
+    }
+
+    @include mq(m900) {
+      padding: 1rem 4rem 3rem;
+    }
+
+    @include mq(m1200) {
+      padding: 7rem 0;
+    }
+
     background-color: #fafafa0f;
-    padding: 7rem 0;
     display: flex;
     justify-content: center;
   }
