@@ -113,6 +113,7 @@
 
     @include mq(m750) {
       padding: 3rem 6rem;
+      font-size: x-large;
     }
 
     @include mq(m900) {
