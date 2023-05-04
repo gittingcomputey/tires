@@ -182,15 +182,6 @@
       font-size: 1.25rem;
       padding: 1rem 2rem;
       background-color: #fafafaef;
-
-      &:hover {
-        cursor: zoom-in;
-      }
-
-      &:active {
-        scale: (1.8);
-        box-shadow: 0.2rem 0.2rem $signBlue;
-      }
     }
 
     padding: 1rem 2rem;
@@ -210,6 +201,15 @@
     @include mq(m1200) {
       width: 350px;
       height: 225px;
+
+      &:hover {
+        cursor: zoom-in;
+      }
+
+      &:active {
+        scale: (1.8);
+        box-shadow: 0.2rem 0.2rem $signBlue;
+      }
     }
 
     @include mq(m1600) {
