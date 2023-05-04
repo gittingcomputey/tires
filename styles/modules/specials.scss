@@ -25,6 +25,10 @@
       height: 90vh;
     }
 
+    @include mq(m1200) {
+      height: 89vh;
+    }
+
     position: relative;
     width: 100vw;
     height: 100vh;
