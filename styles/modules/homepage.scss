@@ -7,9 +7,10 @@
   }
 
   &HeroBox {
-    @include mq(1200) {
-      min-height: 94vh;
+    @include mq(m900) {
+      min-height: 90vh;
     }
+    min-height: none;
   }
 
   &HeadlineContainer {
@@ -80,6 +81,13 @@
   }
 
   &TeaserContainer {
+    @include mq(m900) {
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-around;
+      padding: 2rem 3rem;
+      gap: 2rem;
+    }
+
     @include mq(m1200) {
       grid-template-columns: 1fr 1fr;
       justify-content: space-around;
@@ -90,7 +98,6 @@
     @include mq(m1600) {
       grid-template-columns: 1fr 1fr;
       justify-content: space-between;
-      // min-height: 74vh;
       padding: 3rem 10rem;
       gap: 2rem;
     }
@@ -105,27 +112,46 @@
     background-attachment: fixed;
   }
 
-  &TeaserFloatText {
-    @include mq(m600) {
+  &TeaserFloatTextDiv {
+    @include mq(max375) {
+      font-size: large;
+      line-height: 1.5rem;
+    }
+
+    @include mq(max375-height) {
+      font-size: large;
+      line-height: 1.5rem;
+    }
+
+    @include mq(m375) {
       padding: 2rem;
-      color: black;
+      font-size: x-large;
+    }
+
+    @include mq(m375-height) {
+      line-height: 2.2rem;
     }
 
     @include mq(m750) {
       padding: 3rem 6rem;
       font-size: x-large;
+      line-height: 3.2rem;
     }
 
     @include mq(m900) {
-      padding: 4rem 6rem;
+      @include lookBorder();
+      min-height: none;
+      padding: none;
+      line-height: 2.2rem;
     }
 
     @include mq(m1200) {
+      min-height: none;
       font-size: 1.2rem;
       border-radius: 0.7rem;
-      line-height: 3.2rem;
+      line-height: 3rem;
       background-color: #fafafaeb;
-      padding: 1.5rem 5rem;
+      padding: 0.5rem 5rem;
       transition: 0.4s ease-in-out;
 
       &:hover {
@@ -146,21 +172,25 @@
       font-size: xx-large;
     }
 
+    min-height: 78vh;
     background-color: #fafafaeb;
     color: black;
-    font-size: large;
-    line-height: 2rem;
+    font-size: x-large;
+    text-align: center;
     font-family: "Gruppo", sans-serif;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  &TeaserBox {
+  &TeaserBannerBox {
     @include mq(m1200) {
       padding: 0;
     }
 
     overflow: hidden;
-
     border-radius: 0.3rem;
     display: flex;
     align-items: center;

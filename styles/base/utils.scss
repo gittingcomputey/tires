@@ -15,8 +15,26 @@
 }
 
 @mixin mq($breakpoint) {
-  @if $breakpoint == m350 {
-    @media (min-width: 21.875em) {
+  @if $breakpoint == max375 {
+    @media (min-width: 23.4375em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == max375-height {
+    @media (max-width: 23.4375em) and (max-height: 40.9375em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m375 {
+    @media (min-width: 23.4375em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == m375-height {
+    @media (min-width: 23.4375em) and (min-height: 53.125em) {
       @content;
     }
   }
@@ -52,7 +70,7 @@
   }
 
   @if $breakpoint == m900 {
-    @media (min-width: 56.25em) {
+    @media (min-width: 56.25em) and (orientation: portrait) {
       @content;
     }
   }

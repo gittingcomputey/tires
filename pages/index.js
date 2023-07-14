@@ -24,21 +24,20 @@ export default function Home() {
             </div>
 
             <div className={styles.homeTeaserContainer}>
-              <div className={styles.homeTeaserFloatText}>
+              <div className={styles.homeTeaserFloatTextDiv}>
                 <p className={styles.homeInner}>
                   CLC Tires has been servicing The San Fernando valley since
                   2003. We offer a wide variety of new and used tires,
-                  puncture-patching, and professional alignment. Friendly, fast,
-                  and reliable service.
+                  puncture-patching, and professional alignment.
                 </p>
                 <p>
                   {" "}
                   A family-operated business located in North Hills, CA. Our
                   experienced team members are ready to help with all of your
-                  tire needs.
+                  tire needs. Friendly, fast, and reliable service.
                 </p>
               </div>
-              <div className={styles.homeTeaserBox}>
+              <div className={styles.homeTeaserBannerBox}>
                 <Image
                   className={styles.homeTeaserImg}
                   src="/clc_map3.png"
