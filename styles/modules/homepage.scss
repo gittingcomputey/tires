@@ -7,10 +7,6 @@
   }
 
   &HeroBox {
-    @include mq(m900) {
-      min-height: 90vh;
-    }
-    min-height: none;
   }
 
   &HeadlineContainer {
@@ -89,17 +85,18 @@
     }
 
     @include mq(m1200) {
+      min-height: 76vh;
       grid-template-columns: 1fr 1fr;
       justify-content: space-around;
       padding: 2rem 3rem;
-      gap: 2rem;
+      gap: 0 2rem;
     }
 
     @include mq(m1600) {
       grid-template-columns: 1fr 1fr;
       justify-content: space-between;
-      padding: 3rem 10rem;
-      gap: 2rem;
+      padding: 2rem 10rem;
+      gap: 0 2rem;
     }
 
     display: grid;
@@ -139,20 +136,18 @@
     }
 
     @include mq(m900) {
-      @include lookBorder();
-      min-height: none;
+      min-height: 0;
       padding: none;
       line-height: 2.2rem;
     }
 
     @include mq(m1200) {
-      min-height: none;
-      font-size: 1.2rem;
+      min-height: 0;
       border-radius: 0.7rem;
-      line-height: 3rem;
+      line-height: 2.5rem;
       background-color: #fafafaeb;
-      padding: 0.5rem 5rem;
       transition: 0.4s ease-in-out;
+      padding: 0 3rem;
 
       &:hover {
         background-color: $shadow--bitless;
@@ -210,7 +205,6 @@
   &TeaserData {
     @include mq(m1200) {
       font-size: 1.25rem;
-      padding: 1rem 2rem;
       background-color: #fafafaef;
     }
 
