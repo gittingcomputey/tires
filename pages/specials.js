@@ -16,7 +16,7 @@ const Specials = () => {
               Your browser does not support the video tag.
             </video>
 
-            <div className={styles.specialsHeadlineContainer}>
+            <div className={styles.specialsCouponContainer}>
               <div className={styles.specialsHeadlineBox}>
                 <h1 className={styles.specialsHeadline}>
                   CLC Tires <br />
@@ -30,11 +30,11 @@ const Specials = () => {
                   alt="wheel"
                 ></Image>
                 <h2>4 tire Discount</h2>
-                <h2>
+                <p>
                   Show us this advertisement <br />
                   to redeem coupon
                   <br />
-                </h2>
+                </p>
                 <h3>These specific tires at this discount</h3>
                 <p>(While supplies last)</p>
               </div>
