@@ -274,12 +274,11 @@
 
     border-top: solid $white 0.7rem;
     background-image: radial-gradient(
-        circle farthest-corner at 120.3% 71.5%,
+        circle farthest-corner at 150.3% 71.5%,
         rgba(83, 138, 214, 1) 0%,
         rgba(134, 231, 214, 0.97) 90%
       ),
       url("../../public/tireTrack.png");
-    background-position: left;
     background-attachment: fixed;
     color: $shadow;
     display: grid;
@@ -292,7 +291,7 @@
 
   &ServicesBox1 {
     @include mq(m1200) {
-      padding: 2rem;
+      width: 50%;
       justify-self: center;
     }
 
