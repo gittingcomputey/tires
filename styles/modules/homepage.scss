@@ -383,7 +383,7 @@
     }
 
     @include mq(m1200) {
-      max-width: 45%;
+      max-width: 50%;
       justify-self: center;
       border-radius: 0.7rem;
       padding: 2rem 3rem;
@@ -391,7 +391,7 @@
 
     @include mq(m1600) {
       padding: 2rem 8rem;
-      max-width: 40%;
+      max-width: 50%;
     }
 
     padding: 1rem;
@@ -422,8 +422,13 @@
       font-size: medium;
     }
 
-    @include mq(m1200) {
+    @include mq(m900) {
       font-size: large;
+    }
+
+    @include mq(m1200) {
+      font-size: x-large;
+      padding: 1rem 2rem;
     }
 
     border-radius: 0.7rem;
@@ -441,6 +446,10 @@
       font-size: medium;
     }
 
+    @include mq(m1200) {
+      font-size: large;
+    }
+
     font-size: small;
     text-transform: uppercase;
     font-family: "Red Hat Mono", sans-serif;
@@ -452,6 +461,11 @@
   &ServicesEsp {
     @include mq(m900) {
       font-size: small;
+    }
+
+    @include mq(m1200) {
+      font-size: medium;
+      padding: 2rem 1rem 1.5rem;
     }
 
     font-size: x-small;
