@@ -131,7 +131,7 @@
 
     @include mq(m750) {
       padding: 3rem 6rem;
-      font-size: x-large;
+      font-size: xx-large;
       line-height: 3.2rem;
     }
 
@@ -161,10 +161,6 @@
         opacity: 0.7;
         cursor: crosshair;
       }
-    }
-
-    @include mq(m1600) {
-      font-size: xx-large;
     }
 
     min-height: 78vh;
