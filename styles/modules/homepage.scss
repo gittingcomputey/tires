@@ -148,6 +148,7 @@
       background-color: #fafafaeb;
       transition: 0.4s ease-in-out;
       padding: 0 7rem;
+      font-size: x-large;
 
       &:hover {
         background-color: $shadow--bitless;
@@ -161,6 +162,10 @@
         opacity: 0.7;
         cursor: crosshair;
       }
+    }
+
+    @include mq(m1600) {
+      font-size: xx-large;
     }
 
     min-height: 78vh;
