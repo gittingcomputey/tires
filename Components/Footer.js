@@ -2,6 +2,9 @@ import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerBox}>
@@ -15,7 +18,7 @@ const Footer = () => {
         </h4>
         <p className={styles.footerCopy}>
           <Link href="https://www.gettingcomputey.com">gettingComputey</Link>{" "}
-          &#169;2023
+          &#169;{year}
         </p>
       </div>
     </div>

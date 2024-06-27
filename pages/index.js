@@ -3,11 +3,20 @@ import Layout from "../Components/Layout";
 import Image from "next/image";
 import Navbar from "../Components/Navbar";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 import { GiTireIron, GiCarWheel, GiPhone } from "react-icons/gi";
 import { BiBandAid } from "react-icons/bi";
 
 export default function Home() {
+  // for making map larger on click
+  const [handleFocusClick, setHandleFocusClick] = useState("false");
+
+  // put map back to zoom out on page refresh
+  useEffect(() => {
+    setHandleFocusClick(false);
+  }, []);
+
   return (
     <>
       <Layout>
@@ -39,11 +48,18 @@ export default function Home() {
               </div>
               <div className={styles.homeTeaserBannerBox}>
                 <Image
+                  // toggle map size
+                  onClick={(e) => setHandleFocusClick(!handleFocusClick)}
                   className={styles.homeTeaserImg}
                   src="/clc_map3.png"
                   width="967"
                   height="661"
                   alt="clc location map"
+                  style={
+                    handleFocusClick
+                      ? { transform: "scale(1.8)", cursor: "zoom-out" }
+                      : { border: "solid #3c57e2 .02rem", cursor: "zoom-in" }
+                  }
                 />
                 <div className={styles.homeTeaserAddyBox}>
                   <p className={styles.homeTeaserData}>

@@ -6,9 +6,6 @@
     color: $signBlue;
   }
 
-  &HeroBox {
-  }
-
   &HeadlineContainer {
     @include mq(m600) {
       padding: 2rem 0.6rem 2rem 0.3rem;
@@ -232,7 +229,6 @@
       }
 
       &:active {
-        scale: (1.8);
         box-shadow: 0.2rem 0.2rem $signBlue;
       }
     }
@@ -276,8 +272,8 @@
     border-top: solid $white 0.7rem;
     background-image: radial-gradient(
         circle farthest-corner at 150.3% 71.5%,
-        rgba(83, 138, 214, 1) 0%,
-        rgba(134, 231, 214, 0.97) 90%
+        rgb(202, 213, 229) 0%,
+        rgba(134, 183, 231, 0.97) 90%
       ),
       url("../../public/tireTrack.png");
     background-attachment: fixed;
@@ -301,7 +297,6 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9;
-    filter: brightness(90%);
     padding: 1rem;
     text-align: center;
   }
