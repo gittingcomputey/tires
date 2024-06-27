@@ -135,9 +135,8 @@ export default function Home() {
                 <div className={styles.homeServicesContentBox}>
                   <p className={styles.homeServicesContentReview}>
                     I had a tire pop on the freeway and needed a replacement
-                    quick! I knew CLC was the place to go to for a tire that
-                    could get me back on the road at a reasonable price. I was
-                    back on the road in a quick minute! -JZ
+                    quick! Thanks to CLC, I was back on the road in a quick
+                    minute! -JZ
                   </p>
                   <p className={styles.homeServicesContentReview}>
                     By chance on the corner of Nordhoff and Sepulveda I made a u
