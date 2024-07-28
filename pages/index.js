@@ -26,8 +26,8 @@ export default function Home() {
             <div className={styles.homeHeadlineContainer}>
               <div className={styles.homeHeadlineBox}>
                 <h1 className={styles.homeHeadline}>
-                  <span className={styles.homeWheel}>CLC</span>
-                  <span className={styles.homeWord}> Tires </span>
+                  <span className={styles.homeWheel}>Tire</span>
+                  <span className={styles.homeWord}>Shop</span>
                 </h1>
               </div>
             </div>
@@ -35,13 +35,13 @@ export default function Home() {
             <div className={styles.homeTeaserContainer}>
               <div className={styles.homeTeaserFloatTextDiv}>
                 <p className={styles.homeInner}>
-                  CLC Tires has been servicing The San Fernando valley since
+                  Tire Shop has been servicing The San Fernando valley since
                   2003. We offer a wide variety of new and used tires,
                   puncture-patching, and professional alignment.
                 </p>
                 <p>
                   {" "}
-                  A family-operated business located in North Hills, CA. Our
+                  A family-operated business located in Hollywood, CA. Our
                   experienced team members are ready to help with all of your
                   tire needs. Friendly, fast, and reliable service.
                 </p>
@@ -135,16 +135,16 @@ export default function Home() {
                 <div className={styles.homeServicesContentBox}>
                   <p className={styles.homeServicesContentReview}>
                     I had a tire pop on the freeway and needed a replacement
-                    quick! Thanks to CLC, I was back on the road in a quick
-                    minute! -JZ
+                    quick! Thanks to Tire Shop, I was back on the road in a
+                    quick minute! -JZ
                   </p>
                   <p className={styles.homeServicesContentReview}>
                     By chance on the corner of Nordhoff and Sepulveda I made a u
                     turn and I found an awesome place. -CDA
                   </p>
                   <p className={styles.homeServicesContentReview}>
-                    Sergio and the rest of the team never lag to help a girl out
-                    in need when she pops a tire or has another nail in the
+                    Jane Do and the rest of the team never lag to help a girl
+                    out in need when she pops a tire or has another nail in the
                     benz. -CU
                   </p>
                   <p className={styles.homeServicesContentReview}>
