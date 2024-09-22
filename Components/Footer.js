@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerBox}>
-        <h3 className={styles.footerHeadline}>Tire Shop</h3>
+        <h3 className={styles.footerHeadline}>TireShop</h3>
         <h4 className={styles.footerInfo}>
           <Link href="tel:8185218163">800-123-1212</Link> <br />
           123 Miscellaneous St <br />
