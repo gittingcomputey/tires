@@ -35,9 +35,9 @@ export default function Home() {
             <div className={styles.homeTeaserContainer}>
               <div className={styles.homeTeaserFloatTextDiv}>
                 <p className={styles.homeInner}>
-                  Tire Shop has been servicing The San Fernando valley since
-                  2003. We offer a wide variety of new and used tires,
-                  puncture-patching, and professional alignment.
+                  Tire Shop has been servicing Los Angeles since 2003. We offer
+                  a wide variety of new and used tires, puncture-patching, and
+                  professional alignment.
                 </p>
                 <p>
                   {" "}
@@ -63,13 +63,13 @@ export default function Home() {
                 />
                 <div className={styles.homeTeaserAddyBox}>
                   <p className={styles.homeTeaserData}>
-                    15412 Nordhoff St <br></br> North Hills, CA 91343
+                    123 Miscellaneous St <br></br> Hollywood, CA 90028
                   </p>
                   <p className={styles.homeTeaserData}>
                     <span>
                       <GiPhone className={styles.homeTeaserPhoneIcon} />
                     </span>
-                    <Link href="tel:8185218163">818-830-5189</Link>
+                    <Link href="tel:8001231212">800-123-1212</Link>
                   </p>
                   <Link
                     target={"_blank"}
@@ -139,8 +139,8 @@ export default function Home() {
                     quick minute! -JZ
                   </p>
                   <p className={styles.homeServicesContentReview}>
-                    By chance on the corner of Nordhoff and Sepulveda I made a u
-                    turn and I found an awesome place. -CDA
+                    By chance on the corner of Miscellaneous and Avenue I made a
+                    u turn and I found an awesome place. -CDA
                   </p>
                   <p className={styles.homeServicesContentReview}>
                     Jane Do and the rest of the team never lag to help a girl
