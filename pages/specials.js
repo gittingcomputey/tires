@@ -19,7 +19,7 @@ const Specials = () => {
             <div className={styles.specialsCouponContainer}>
               <div className={styles.specialsHeadlineBox}>
                 <h1 className={styles.specialsHeadline}>
-                  CLC Tires <br />
+                  TireShop <br />
                   coupon
                 </h1>
 

@@ -28,8 +28,8 @@ const Layout = ({ title, keywords, description, children }) => {
 };
 
 Layout.defaultProps = {
-  title: "CLC Tires",
-  description: "CLC Tires, Van Nuys CA",
+  title: "TireShop",
+  description: "TireShop, Hollywood CA",
   keywords: "tires, used-tires, wheels, rims, repair, alignment, balancing",
 };
 

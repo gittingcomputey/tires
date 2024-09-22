@@ -26,8 +26,7 @@ export default function Home() {
             <div className={styles.homeHeadlineContainer}>
               <div className={styles.homeHeadlineBox}>
                 <h1 className={styles.homeHeadline}>
-                  <span className={styles.homeWheel}>Tire</span>
-                  <span className={styles.homeWord}>Shop</span>
+                  <span className={styles.homeWord}>TireShop</span>
                 </h1>
               </div>
             </div>
