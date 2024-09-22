@@ -34,8 +34,8 @@ export default function Home() {
             <div className={styles.homeTeaserContainer}>
               <div className={styles.homeTeaserFloatTextDiv}>
                 <p className={styles.homeInner}>
-                  Tire Shop has been servicing Los Angeles since 2003. We offer
-                  a wide variety of new and used tires, puncture-patching, and
+                  TireShop has been servicing Los Angeles since 2003. We offer a
+                  wide variety of new and used tires, puncture-patching, and
                   professional alignment.
                 </p>
                 <p>
