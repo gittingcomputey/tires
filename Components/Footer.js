@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.footerBox}>
         <h3 className={styles.footerHeadline}>TireShop</h3>
         <h4 className={styles.footerInfo}>
-          <Link href="tel:8185218163">800-123-1212</Link> <br />
+          <Link href="tel:2484345508">800-123-1212</Link> <br />
           123 Miscellaneous St <br />
           Hollywood, CA 90028 <br /> <br />
           Mon-Sat: 11am - 6pm <br />
