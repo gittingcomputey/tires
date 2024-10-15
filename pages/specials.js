@@ -11,8 +11,12 @@ const Specials = () => {
         <Navbar navTitle="home" />
         <div className={styles.specialsMainContainer}>
           <div className={styles.specialsVidContainer}>
-            <video playsInline autoPlay muted preload="none">
-              <source src="tires-DanCristianP.mp4" type="video/mp4" />
+            <video playsInline autoPlay muted preload="auto">
+              <source
+                src="tires-DanCristianP.mp4"
+                type="video/mp4"
+                poster={tire}
+              />
               Your browser does not support the video tag.
             </video>
 
