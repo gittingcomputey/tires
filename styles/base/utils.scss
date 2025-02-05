@@ -15,6 +15,12 @@
 }
 
 @mixin mq($breakpoint) {
+  @if $breakpoint == mland {
+    @media (min-width: 1em) and (orientation: landscape) {
+      @content;
+    }
+  }
+
   @if $breakpoint == max375 {
     @media (max-width: 23.4375em) {
       @content;

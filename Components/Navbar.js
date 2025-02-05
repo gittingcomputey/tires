@@ -13,7 +13,10 @@ const Navbar = (props) => {
           {router.pathname === "/" ? (
             ""
           ) : (
-            <Link className={styles.naviEach} href={"/"}>
+            <Link
+              className={`${styles.naviEach} ${styles.naviHome}`}
+              href={"/"}
+            >
               Home
             </Link>
           )}

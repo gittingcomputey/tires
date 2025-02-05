@@ -21,14 +21,24 @@
   }
 
   &Each {
+    @include mq(m750) {
+      &:hover {
+        scale: 1.05;
+      }
+    }
+
     font-family: "Goldman", sans-serif;
     padding: 0 0.5rem;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;
 
-    &:hover {
-      scale: 1.05;
+    &:active {
+      color: blue;
     }
+  }
+
+  &Home {
+    color: grey;
   }
 }

@@ -46,13 +46,25 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.homeTeaserBannerBox}>
-                <Image
-                  className={styles.homeTeaserImg}
-                  src="/TirePicByYvetteS.jpg"
-                  width="600"
-                  height="300"
-                  alt="Closeup of new tire top part of new tire. You can see the threads are unworn and have deep grooves."
-                />
+                <div className={styles.homeTeaserImgBox}>
+                  <div className={styles.homeTeaserImgText}>
+                    Find the <br />
+                    right tires <br />
+                    for you
+                  </div>
+                  <div>
+                    <span className={styles.homeTeaserBrands}>
+                      Firestoned Rallies Prellies Fauxlken
+                    </span>
+                  </div>
+                  <Image
+                    className={styles.homeTeaserImg}
+                    src="/TirePicByYvetteS.jpg"
+                    width="600"
+                    height="300"
+                    alt="Closeup of new tire top part of new tire. You can see the threads are unworn and have deep grooves."
+                  />
+                </div>
                 <div className={styles.homeTeaserAddyBox}>
                   <p className={styles.homeTeaserData}>
                     123 Miscellaneous St <br></br> Hollywood, CA 90028

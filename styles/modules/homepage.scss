@@ -7,7 +7,6 @@
   }
 
   &HeroBox {
-    // border: inset red 0.2rem;
   }
 
   &HeadlineContainer {
@@ -25,6 +24,15 @@
   &HeadlineBox {
     @include mq(m600) {
       padding: 0.3rem 1.5rem;
+    }
+    @include mq(mland) {
+      padding: 1.5rem 1.5rem;
+      margin: 3rem 0;
+    }
+
+    @include mq(m750) {
+      padding: 1.5rem;
+      margin: 0;
     }
 
     padding: 0.1rem 0.5rem;
@@ -113,9 +121,11 @@
   &TeaserFloatTextDiv {
     @include mq(max375) {
       font-size: large;
-      border: blue 0.2rem solid;
     }
 
+    @include mq(mland) {
+      min-height: none;
+    }
     @include mq(m600) {
       font-size: xx-large;
     }
@@ -185,6 +195,25 @@
     border-radius: 0.3rem;
   }
 
+  &TeaserBrands {
+    color: white;
+    font-size: medium;
+  }
+
+  &TeaserBrands::before {
+    content: "-";
+    color: white;
+  }
+
+  &TeaserBrands::after {
+    content: "-";
+    color: white;
+  }
+
+  &TeaserImgBox {
+    position: relative;
+  }
+
   &TeaserImg {
     @include mq(m600) {
       width: 450px;
@@ -204,6 +233,45 @@
     width: 300px;
     height: 200px;
     border-radius: 0.3rem;
+  }
+
+  &TeaserImgText {
+    @include mq(max375) {
+      padding: 3rem;
+      top: 24%;
+      left: 17%;
+    }
+
+    @include mq(m600) {
+      font-size: xx-large;
+    }
+
+    @include mq(m1200) {
+      top: 13%;
+      left: 10%;
+    }
+
+    @include mq(m1600) {
+      top: 18%;
+      left: 18%;
+    }
+
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    z-index: 10;
+    color: $shadow--bitless;
+    font-family: "Share Tech Mono", serif;
+    background-image: linear-gradient(
+      to bottom right,
+      #dff4d4 15%,
+      #d9ebf2 50%,
+      #d9ebf28d 75%,
+      transparent 85%
+    );
+    font-size: large;
+    padding: 2.8rem;
+    border-radius: 30%;
   }
 
   &TeaserPhoneIcon {
@@ -227,9 +295,36 @@
   }
 
   &ServicesSection {
+    @include mq(m750) {
+      padding: 6rem 0;
+      column-gap: 3rem;
+      row-gap: 4rem;
+      justify-content: space-around;
+      grid-template-columns: 3% 1fr 1fr 3%;
+      grid-template-areas:
+        ". services services ."
+        ". test test .";
+    }
+
     @include mq(m1200) {
-      padding: 6rem 0.7rem 0;
-      row-gap: 7rem;
+      padding: 6rem 0;
+      column-gap: 3rem;
+      row-gap: 0;
+      justify-content: space-around;
+      grid-template-columns: 3% 1fr 1fr 3%;
+      grid-template-areas:
+        ". services test ."
+        ". services test .";
+    }
+
+    @include mq(m1600) {
+      padding: 6rem 0;
+      column-gap: 6rem;
+      justify-content: space-around;
+      grid-template-columns: 6% 1fr 1fr 6%;
+      grid-template-areas:
+        ". services test ."
+        ". services test .";
     }
 
     border-top: solid $white 0.7rem;
@@ -244,19 +339,18 @@
     background-attachment: fixed;
     color: $shadow;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 2% 1fr 1fr 2%;
+    grid-template-rows: 1fr 1fr;
     justify-content: space-evenly;
-    row-gap: 0.7rem;
-    padding: 0;
+    padding: 2rem 0 6rem;
+    row-gap: 2rem;
+    grid-template-areas:
+      ". services services ."
+      ". test test .";
   }
 
   &ServicesCont {
-    @include mq(m1200) {
-      width: 50%;
-      justify-self: center;
-    }
-
+    grid-area: services;
     background-image: url("../../public/tires-robert-laursoo.jpg");
     background-size: cover;
     background-position: center;
@@ -264,6 +358,7 @@
     opacity: 0.9;
     padding: 1rem;
     text-align: center;
+    background-color: red;
   }
 
   &ServicesMid {
@@ -302,14 +397,16 @@
 
   &ServicesUL {
     list-style-type: none;
-    filter: contrast(180%) brightness(100%);
     padding: 0;
   }
 
   &ServicesLI {
-    @include mq(m900) {
+    @include mq(max375) {
+      font-size: x-small;
+    }
+
+    @include mq(m1200) {
       font-size: medium;
-      width: 100%;
     }
 
     margin: 0.5rem 0;
@@ -336,19 +433,7 @@
   }
 
   &TestimonialsCont {
-    @include mq(m750land) {
-      width: 70%;
-      margin: auto;
-
-      padding-bottom: 6rem;
-    }
-
-    @include mq(m1200) {
-      width: 50%;
-      justify-self: center;
-      margin-bottom: 6rem;
-    }
-
+    grid-area: test;
     background-color: #fafafa0f;
     display: flex;
     justify-content: center;
@@ -369,19 +454,6 @@
   }
 
   &TestimonialsReview {
-    // @include mq(m350) {
-    //   font-size: medium;
-    // }
-
-    // @include mq(m900) {
-    //   font-size: large;
-    // }
-
-    // @include mq(m1200) {
-    //   font-size: x-large;
-    //   padding: 1rem 2rem;
-    // }
-
     border-radius: 0.7rem;
     padding: 0.8rem 2rem;
     font-family: sans-serif, monospace;
