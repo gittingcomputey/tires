@@ -168,7 +168,7 @@
     min-height: 78vh;
     background-color: #fafafaeb;
     color: black;
-    font-size: x-large;
+    font-size: large;
     text-align: center;
     font-family: "Gruppo", sans-serif;
     padding: 1.5rem 2rem;
@@ -263,7 +263,7 @@
     }
   }
 
-  &ServicesContainer {
+  &ServicesSection {
     @include mq(m1200) {
       padding: 6rem 0.7rem 0;
       row-gap: 7rem;
@@ -286,7 +286,7 @@
     padding: 0;
   }
 
-  &ServicesBox1 {
+  &ServicesCont {
     @include mq(m1200) {
       width: 50%;
       justify-self: center;
@@ -324,7 +324,8 @@
     font-family: "VT323", monospace;
     margin: 0;
     color: rgba(83, 138, 214, 1);
-    font-size: xx-large;
+    font-size: x-large;
+
     text-shadow: 0.1rem 0.1rem 0 $signYellow;
     background-color: #fafafadf;
     text-align: center;
@@ -334,13 +335,13 @@
     padding: 0 1rem;
   }
 
-  &ServicesContentUL {
+  &ServicesUL {
     list-style-type: none;
     filter: contrast(180%) brightness(100%);
     padding: 0;
   }
 
-  &ServicesContentLI {
+  &ServicesLI {
     @include mq(m900) {
       font-size: medium;
       width: 100%;
@@ -357,7 +358,7 @@
     text-align: center;
   }
 
-  &ServicesContentIcon {
+  &ServicesIcon {
     @include mq(m1200) {
       font-size: xxx-large;
     }
@@ -369,7 +370,25 @@
     color: #fafafa;
   }
 
-  &ServicesBox {
+  &TestimonialsCont {
+    @include mq(m600) {
+      padding: 0.5rem 0;
+    }
+
+    @include mq(m900) {
+      padding: 1rem 4rem 3rem;
+    }
+
+    @include mq(m1200) {
+      padding: 7rem 0;
+    }
+
+    background-color: #fafafa0f;
+    display: flex;
+    justify-content: center;
+  }
+
+  &TestimonialsBox {
     @include mq(m600) {
       padding: 1rem 5rem;
     }
@@ -395,25 +414,7 @@
     box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
   }
 
-  &ServicesDivider {
-    @include mq(m600) {
-      padding: 0.5rem 0;
-    }
-
-    @include mq(m900) {
-      padding: 1rem 4rem 3rem;
-    }
-
-    @include mq(m1200) {
-      padding: 7rem 0;
-    }
-
-    background-color: #fafafa0f;
-    display: flex;
-    justify-content: center;
-  }
-
-  &ServicesContentReview {
+  &TestimonialsReview {
     @include mq(m350) {
       font-size: medium;
     }
@@ -437,7 +438,7 @@
     outline: 2px inset $signYellow;
   }
 
-  &ServicesHeadline2 {
+  &TestimonialsHeadline {
     @include mq(m900) {
       font-size: medium;
     }
@@ -452,9 +453,11 @@
     letter-spacing: 0.2rem;
     color: rgba(26, 86, 170, 0.773);
     text-shadow: 0.1rem 0.1rem 0 $signYellow;
+
+    text-align: center;
   }
 
-  &ServicesEsp {
+  &TestimonialsEsp {
     @include mq(m900) {
       font-size: small;
     }
@@ -470,7 +473,7 @@
     letter-spacing: 0.1rem;
   }
 
-  &ServicesEspTextCaps {
+  &TestimonialsEspTextCaps {
     text-transform: uppercase;
   }
 }

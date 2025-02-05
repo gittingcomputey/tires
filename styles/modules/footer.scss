@@ -33,6 +33,10 @@
     font-size: small;
   }
 
+  &Info > p {
+    margin: 0.2rem;
+  }
+
   &Copy {
     @include mq(m900) {
       font-size: 0.7rem;

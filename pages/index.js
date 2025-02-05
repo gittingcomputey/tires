@@ -21,12 +21,12 @@ export default function Home() {
     <>
       <Layout>
         <Navbar navTitle={"specials"} />
-        <div className={styles.homeContainer}>
+        <main className={styles.homeContainer}>
           <div className={styles.homeHeroBox}>
             <div className={styles.homeHeadlineContainer}>
               <div className={styles.homeHeadlineBox}>
                 <h1 className={styles.homeHeadline}>
-                  <span className={styles.homeWord}>TireShop</span>
+                  <span className={styles.homeWord}>Tire Shop</span>
                 </h1>
               </div>
             </div>
@@ -82,43 +82,33 @@ export default function Home() {
           </div>
 
           {/* services section */}
-          <div id="services" className={styles.homeServicesContainer}>
-            <div className={styles.homeServicesBox1}>
+          <section id="services" className={styles.homeServicesSection}>
+            <div className={styles.homeServicesCont}>
               <div className={styles.homeServicesMid}>
                 <div className={styles.homeServicesHeadlineBox}>
                   <h2 className={styles.homeServicesHeadline1}>Services</h2>
                 </div>
-                <div className={styles.homeServicesContentBox}>
+                <div className={styles.homeServicesBox}>
                   <div className={styles.homeServicesULBox}>
-                    <ul className={styles.homeServicesContentUL}>
+                    <ul className={styles.homeServicesUL}>
                       <li>
-                        <GiCarWheel
-                          className={styles.homeServicesContentIcon}
-                        />
+                        <GiCarWheel className={styles.homeServicesIcon} />
                       </li>
-                      <li className={styles.homeServicesContentLI}>
-                        New tires
-                      </li>
+                      <li className={styles.homeServicesLI}>New tires</li>
                       <li>
-                        <GiCarWheel
-                          className={styles.homeServicesContentIcon}
-                        />
+                        <GiCarWheel className={styles.homeServicesIcon} />
                       </li>
-                      <li className={styles.homeServicesContentLI}>
-                        Used tires
-                      </li>
+                      <li className={styles.homeServicesLI}>Used tires</li>
                       <li>
-                        <BiBandAid className={styles.homeServicesContentIcon} />
+                        <BiBandAid className={styles.homeServicesIcon} />
                       </li>
-                      <li className={styles.homeServicesContentLI}>
+                      <li className={styles.homeServicesLI}>
                         Puncture Patching
                       </li>
                       <li>
-                        <GiTireIron
-                          className={styles.homeServicesContentIcon}
-                        />
+                        <GiTireIron className={styles.homeServicesIcon} />
                       </li>
-                      <li className={styles.homeServicesContentLI}>
+                      <li className={styles.homeServicesLI}>
                         Alignment and Balancing
                       </li>
                     </ul>
@@ -126,45 +116,47 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={styles.homeServicesDivider}>
-              <div className={styles.homeServicesBox}>
-                <div className={styles.homeServicesHeadlineBox}>
-                  <h2 className={styles.homeServicesHeadline2}>testimonials</h2>
+            <section className={styles.homeTestimonialsCont}>
+              <div className={styles.homeTestimonialsBox}>
+                <div className={styles.homeTestimonialsHeadlineBox}>
+                  <h2 className={styles.homeTestimonialsHeadline}>
+                    testimonials
+                  </h2>
                 </div>
-                <div className={styles.homeServicesContentBox}>
-                  <p className={styles.homeServicesContentReview}>
+                <div className={styles.homeTestimonialsBox}>
+                  <p className={styles.homeTestimonialsReview}>
                     I had a tire pop on the freeway and needed a replacement
                     quick! Thanks to Tire Shop, I was back on the road in a
                     quick minute! -JZ
                   </p>
-                  <p className={styles.homeServicesContentReview}>
+                  <p className={styles.homeTestimonialsReview}>
                     By chance on the corner of Miscellaneous and Avenue I made a
                     u turn and I found an awesome place. -CDA
                   </p>
-                  <p className={styles.homeServicesContentReview}>
+                  <p className={styles.homeTestimonialsReview}>
                     Jane Do and the rest of the team never lag to help a girl
                     out in need when she pops a tire or has another nail in the
                     benz. -CU
                   </p>
-                  <p className={styles.homeServicesContentReview}>
+                  <p className={styles.homeTestimonialsReview}>
                     Really friendly and super helpful! -ARG
                   </p>
                 </div>
-                <div className={styles.homeServicesEsp}>
-                  <div className={styles.homeServicesEspBox}>
-                    <h3 className={styles.homeServicesEspText}>
-                      <span className={styles.homeServicesEspTextCaps}>
+                <div className={styles.homeTestimonialsEsp}>
+                  <div className={styles.homeTestimonialsEspBox}>
+                    <h3 className={styles.homeTestimonialsEspText}>
+                      <span className={styles.homeTestimonialsEspTextCaps}>
                         Se habla español. <br />
-                      </span>{" "}
+                      </span>
                       Vendemos llantas, nuevas y usadas. <br />
                       Ubicados en North Hills, en el valle de San Fernando.
                     </h3>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </section>
+          </section>
+        </main>
       </Layout>
     </>
   );
