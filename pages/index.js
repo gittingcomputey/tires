@@ -31,11 +31,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={styles.homeTeaserContainer}>
+            <section className={styles.homeTeaserContainer}>
               <div className={styles.homeTeaserFloatTextDiv}>
                 <p className={styles.homeInner}>
-                  TireShop has been servicing Los Angeles since 2003. We offer a
-                  wide variety of new and used tires, puncture-patching, and
+                  Tire Shop has been servicing Los Angeles since 2003. We offer
+                  a wide variety of new and used tires, puncture-patching, and
                   professional alignment.
                 </p>
                 <p>
@@ -47,18 +47,11 @@ export default function Home() {
               </div>
               <div className={styles.homeTeaserBannerBox}>
                 <Image
-                  // toggle map size
-                  onClick={(e) => setHandleFocusClick(!handleFocusClick)}
                   className={styles.homeTeaserImg}
                   src="/clc_map3.png"
-                  width="967"
-                  height="661"
+                  width="600"
+                  height="300"
                   alt="clc location map"
-                  style={
-                    handleFocusClick
-                      ? { transform: "scale(1.8)", cursor: "zoom-out" }
-                      : { border: "solid #3c57e2 .02rem", cursor: "zoom-in" }
-                  }
                 />
                 <div className={styles.homeTeaserAddyBox}>
                   <p className={styles.homeTeaserData}>
@@ -78,7 +71,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
 
           {/* services section */}
@@ -116,6 +109,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* testimonials section */}
             <section className={styles.homeTestimonialsCont}>
               <div className={styles.homeTestimonialsBox}>
                 <div className={styles.homeTestimonialsHeadlineBox}>
@@ -144,7 +139,7 @@ export default function Home() {
                 </div>
                 <div className={styles.homeTestimonialsEsp}>
                   <div className={styles.homeTestimonialsEspBox}>
-                    <h3 className={styles.homeTestimonialsEspText}>
+                    <h3 lang="es" className={styles.homeTestimonialsEspText}>
                       <span className={styles.homeTestimonialsEspTextCaps}>
                         Se habla español. <br />
                       </span>

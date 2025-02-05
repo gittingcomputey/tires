@@ -6,6 +6,9 @@
     color: $signBlue;
   }
 
+  &HeroBox {
+  }
+
   &HeadlineContainer {
     @include mq(m600) {
       padding: 2rem 0.6rem 2rem 0.3rem;
@@ -107,37 +110,6 @@
   }
 
   &TeaserFloatTextDiv {
-    @include mq(max375) {
-      font-size: large;
-      line-height: 1.5rem;
-    }
-
-    @include mq(max375-height) {
-      font-size: large;
-      line-height: 1.5rem;
-    }
-
-    @include mq(m375) {
-      padding: 2rem;
-      font-size: x-large;
-    }
-
-    @include mq(m375-height) {
-      line-height: 2.2rem;
-    }
-
-    @include mq(m750) {
-      padding: 3rem 6rem;
-      font-size: xx-large;
-      line-height: 3.2rem;
-    }
-
-    @include mq(m900) {
-      min-height: 0;
-      padding: 0;
-      line-height: 2.2rem;
-    }
-
     @include mq(m1200) {
       min-height: 0;
       border-radius: 0.7rem;
@@ -166,16 +138,18 @@
     }
 
     min-height: 78vh;
-    background-color: #fafafaeb;
+    background-color: #fafafacb;
     color: black;
-    font-size: large;
+    font-size: x-large;
     text-align: center;
     font-family: "Gruppo", sans-serif;
+    font-weight: 600;
     padding: 1.5rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    backdrop-filter: blur(3px);
   }
 
   &TeaserBannerBox {
@@ -223,14 +197,6 @@
     @include mq(m1200) {
       width: 350px;
       height: 225px;
-
-      &:hover {
-        cursor: zoom-in;
-      }
-
-      &:active {
-        box-shadow: 0.2rem 0.2rem $signBlue;
-      }
     }
 
     @include mq(m1600) {
@@ -371,18 +337,6 @@
   }
 
   &TestimonialsCont {
-    @include mq(m600) {
-      padding: 0.5rem 0;
-    }
-
-    @include mq(m900) {
-      padding: 1rem 4rem 3rem;
-    }
-
-    @include mq(m1200) {
-      padding: 7rem 0;
-    }
-
     background-color: #fafafa0f;
     display: flex;
     justify-content: center;
@@ -395,18 +349,6 @@
 
     @include mq(m750) {
       padding: 2rem 8rem;
-    }
-
-    @include mq(m1200) {
-      max-width: 50%;
-      justify-self: center;
-      border-radius: 0.7rem;
-      padding: 2rem 3rem;
-    }
-
-    @include mq(m1600) {
-      padding: 2rem 8rem;
-      max-width: 50%;
     }
 
     padding: 1rem;
@@ -467,10 +409,9 @@
       padding: 2rem 1rem 1.5rem;
     }
 
-    font-size: x-small;
-    padding: 1rem 1rem 1.5rem;
+    font-size: small;
     text-align: center;
-    letter-spacing: 0.1rem;
+    padding: 2rem 3rem;
   }
 
   &TestimonialsEspTextCaps {
