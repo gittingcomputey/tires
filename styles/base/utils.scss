@@ -16,7 +16,7 @@
 
 @mixin mq($breakpoint) {
   @if $breakpoint == max375 {
-    @media (min-width: 23.4375em) {
+    @media (max-width: 23.4375em) {
       @content;
     }
   }
@@ -113,7 +113,7 @@
 
 @keyframes words {
   0% {
-    color: $signBlue;
+    color: $primaryBlue;
   }
 
   50% {

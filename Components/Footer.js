@@ -8,22 +8,35 @@ const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <footer className={styles.footerBox}>
-        <h2 className={styles.footerHeadline}>Tire Shop</h2>
-        <address className={styles.footerInfo}>
-          <p>
-            <Link href="tel:2484345508">Tel:800-123-1212</Link>{" "}
+        <div>
+          <h2 className={styles.footerHeadline}>Tire Shop</h2>
+        </div>
+        <div>
+          <address className={styles.footerInfo}>
+            <p className={styles.footerAddy}>
+              123 Miscellaneous St <br></br>
+              Hollywood, CA 90028 <br></br>
+              <span className={styles.footerInfoTel}>
+                <Link href="tel:2484345508">Tel:800-123-1212</Link>
+              </span>
+            </p>
+
+            <p className={styles.footerHours}>
+              Mon-Sat: 11am - 6pm <br />
+              Sunday: 11am - 5pm
+            </p>
+          </address>
+        </div>
+        <div>
+          <p className={styles.footerCopy}>
+            <small>
+              <Link href="https://www.gettingcomputey.com">
+                gettingComputey
+              </Link>
+              &#169;{year}
+            </small>
           </p>
-          <p>123 Miscellaneous St</p>
-          <p>Hollywood, CA 90028 </p>
-          <p>
-            Mon-Sat: 11am - 6pm <br />
-            Sunday: 11am - 5pm
-          </p>
-        </address>
-        <p className={styles.footerCopy}>
-          <Link href="https://www.gettingcomputey.com">gettingComputey</Link>
-          &#169;{year}
-        </p>
+        </div>
       </footer>
     </div>
   );

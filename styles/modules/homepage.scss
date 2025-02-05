@@ -3,10 +3,11 @@
     padding: 0;
     margin: 0;
     background-color: azure;
-    color: $signBlue;
+    color: $primaryBlue;
   }
 
   &HeroBox {
+    // border: inset red 0.2rem;
   }
 
   &HeadlineContainer {
@@ -29,7 +30,7 @@
     padding: 0.1rem 0.5rem;
     box-shadow: 0.5rem 0.5rem 0.09rem $shadow;
     text-align: center;
-    background-color: $signYellow;
+    background-color: $primaryYellow;
   }
 
   &Headline {
@@ -51,7 +52,7 @@
 
     font-family: "Stalinist One", sans-serif;
     font-size: 2rem;
-    color: $signBlue;
+    color: $primaryBlue;
     font-weight: 300;
     text-shadow: 0.1rem 0.2rem 0.1rem $shadow;
   }
@@ -71,7 +72,7 @@
 
     font-family: "Stalinist One", sans-serif;
     font-size: 2rem;
-    color: $signBlue;
+    color: $primaryBlue;
     font-weight: 300;
     text-shadow: 0.1rem 0.2rem 0.1rem $shadow;
   }
@@ -110,41 +111,38 @@
   }
 
   &TeaserFloatTextDiv {
+    @include mq(max375) {
+      font-size: large;
+      border: blue 0.2rem solid;
+    }
+
+    @include mq(m600) {
+      font-size: xx-large;
+    }
+
     @include mq(m1200) {
       min-height: 0;
       border-radius: 0.7rem;
       line-height: 2.5rem;
-      background-color: #fafafaeb;
+      background-color: $shadow--bitless;
+      color: white;
       transition: 0.4s ease-in-out;
       padding: 0 7rem;
       font-size: x-large;
-
-      &:hover {
-        background-color: $shadow--bitless;
-        color: white;
-      }
-
-      &:active {
-        text-shadow: 0.1rem 0.1rem 0 #72656b;
-        background-color: $signBlue;
-        color: $signYellow;
-        opacity: 0.7;
-        cursor: crosshair;
-      }
     }
 
     @include mq(m1600) {
       font-size: xx-large;
     }
 
-    min-height: 78vh;
+    min-height: 79vh;
     background-color: #fafafacb;
     color: black;
     font-size: x-large;
     text-align: center;
     font-family: "Gruppo", sans-serif;
     font-weight: 600;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,8 +180,7 @@
 
     padding: 1rem 2rem;
     background-color: #fafafad6;
-    font-family: "Red Hat Mono", monospace;
-    color: $signBlueBlack;
+    color: $primaryBlueBlack;
     font-size: large;
     border-radius: 0.3rem;
   }
@@ -236,12 +233,14 @@
     }
 
     border-top: solid $white 0.7rem;
-    background-image: radial-gradient(
-        circle farthest-corner at 150.3% 71.5%,
-        rgb(202, 213, 229) 0%,
-        rgba(134, 183, 231, 0.97) 90%
+    background-image: linear-gradient(
+        rgb(154, 187, 237) 0%,
+        rgba(134, 183, 231, 0.75),
+        rgba(179, 207, 235, 0.97) 50%,
+        transparent
       ),
       url("../../public/tireTrack.png");
+    backdrop-filter: grayscale(30%);
     background-attachment: fixed;
     color: $shadow;
     display: grid;
@@ -292,7 +291,7 @@
     color: rgba(83, 138, 214, 1);
     font-size: x-large;
 
-    text-shadow: 0.1rem 0.1rem 0 $signYellow;
+    text-shadow: 0.1rem 0.1rem 0 $primaryYellow;
     background-color: #fafafadf;
     text-align: center;
   }
@@ -337,6 +336,19 @@
   }
 
   &TestimonialsCont {
+    @include mq(m750land) {
+      width: 70%;
+      margin: auto;
+
+      padding-bottom: 6rem;
+    }
+
+    @include mq(m1200) {
+      width: 50%;
+      justify-self: center;
+      margin-bottom: 6rem;
+    }
+
     background-color: #fafafa0f;
     display: flex;
     justify-content: center;
@@ -348,36 +360,36 @@
     }
 
     @include mq(m750) {
-      padding: 2rem 8rem;
+      padding: 2rem;
     }
 
     padding: 1rem;
-    background-color: azure;
+    background-color: rgba(240, 255, 255, 0.7);
     box-shadow: 0.4rem 0.4rem 0.1rem rgba(33, 32, 32, 0.088);
   }
 
   &TestimonialsReview {
-    @include mq(m350) {
-      font-size: medium;
-    }
+    // @include mq(m350) {
+    //   font-size: medium;
+    // }
 
-    @include mq(m900) {
-      font-size: large;
-    }
+    // @include mq(m900) {
+    //   font-size: large;
+    // }
 
-    @include mq(m1200) {
-      font-size: x-large;
-      padding: 1rem 2rem;
-    }
+    // @include mq(m1200) {
+    //   font-size: x-large;
+    //   padding: 1rem 2rem;
+    // }
 
     border-radius: 0.7rem;
     padding: 0.8rem 2rem;
-    font-family: monospace;
-    font-size: small;
+    font-family: sans-serif, monospace;
+    font-size: medium;
     font-style: italic;
     color: $black;
     background-color: $white;
-    outline: 2px inset $signYellow;
+    outline: 2px inset $primaryYellow;
   }
 
   &TestimonialsHeadline {
@@ -389,13 +401,12 @@
       font-size: large;
     }
 
-    font-size: small;
     text-transform: uppercase;
     font-family: "Red Hat Mono", sans-serif;
     letter-spacing: 0.2rem;
     color: rgba(26, 86, 170, 0.773);
-    text-shadow: 0.1rem 0.1rem 0 $signYellow;
-
+    text-shadow: 0.1rem 0.1rem 0 $primaryYellow;
+    font-size: large;
     text-align: center;
   }
 

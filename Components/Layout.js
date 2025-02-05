@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.scss";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
-    <div className={styles.layoutDiv}>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -13,17 +13,10 @@ const Layout = ({ title, keywords, description, children }) => {
         <link rel="manifest" href="/site.webmanifest"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="icon" href="/tire-svg-1.png" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        ></link>
       </Head>
-
       <main className={styles.mainSiteContainer}>{children}</main>
-
       <Footer />
-    </div>
+    </>
   );
 };
 

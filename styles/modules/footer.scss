@@ -1,40 +1,47 @@
 .footer {
   &Container {
-    @include mq(m900) {
-      padding: 2rem 0;
-    }
-
     background-color: black;
-
     color: $white;
-    text-align: center;
-    font-family: "Bebas Neue", serif;
-    font-weight: 400;
-    font-style: normal;
+
+    width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+
+  &Box {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
   }
 
   &Headline {
-    color: red;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    color: $candle;
+    font-size: 1.7rem;
+    justify-self: center;
+    text-align: center;
   }
 
   &Info {
-    font-size: x-large;
+    text-align: center;
   }
 
-  &Info > p {
-    margin: 0.2rem;
+  &Addy {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  &Hours {
+    text-align: center;
+    font-size: smaller;
   }
 
   &Copy {
-    font-size: 0.8rem;
+    text-align: center;
     color: $lightgrey;
     font-family: sans-serif;
-    font-size: smaller;
-    & a {
-      color: $lightgrey;
-    }
   }
 }

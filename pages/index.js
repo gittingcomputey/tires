@@ -48,10 +48,10 @@ export default function Home() {
               <div className={styles.homeTeaserBannerBox}>
                 <Image
                   className={styles.homeTeaserImg}
-                  src="/clc_map3.png"
+                  src="/TirePicByYvetteS.jpg"
                   width="600"
                   height="300"
-                  alt="clc location map"
+                  alt="Closeup of new tire top part of new tire. You can see the threads are unworn and have deep grooves."
                 />
                 <div className={styles.homeTeaserAddyBox}>
                   <p className={styles.homeTeaserData}>
@@ -144,7 +144,7 @@ export default function Home() {
                         Se habla español. <br />
                       </span>
                       Vendemos llantas, nuevas y usadas. <br />
-                      Ubicados en North Hills, en el valle de San Fernando.
+                      Ubicados en Hollywood.
                     </h3>
                   </div>
                 </div>

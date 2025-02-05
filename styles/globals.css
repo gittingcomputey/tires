@@ -15,6 +15,15 @@ a {
   box-sizing: border-box;
 }
 
+/* take a peek at overflow */
+/* 
+*,
+*::before,
+*::after {
+  outline: 2px solid lime;
+  content: "*";
+} */
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
