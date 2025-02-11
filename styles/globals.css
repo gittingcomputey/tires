@@ -17,12 +17,13 @@ a {
 
 /* take a peek at overflow */
 /* 
+
 *,
 *::before,
 *::after {
   outline: 2px solid lime;
   content: "*";
-} */
+ */
 
 /* @media (prefers-color-scheme: dark) {
   html {

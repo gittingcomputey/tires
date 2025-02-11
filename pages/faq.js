@@ -18,14 +18,14 @@ const Faq = () => {
             {/* contents */}
             <div className={styles.faqContentBox}>
               {QA.map((qa, index) => (
-                <div key={index} className={styles.faqQABox}>
-                  <div className={styles.faqQuestionBox}>
+                <details key={index} className={styles.faqQABox}>
+                  <summary className={styles.faqQuestionBox}>
                     <p className={styles.faqQuestion}>{qa.Q}</p>
-                  </div>
+                  </summary>
                   <div className={styles.faqAnswerBox}>
                     <p className={styles.faqAnswer}>{qa.A}</p>
                   </div>
-                </div>
+                </details>
               ))}
             </div>
           </div>

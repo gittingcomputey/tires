@@ -24,18 +24,13 @@
 
   &Headline {
     @include mq(m600) {
-      font-size: large;
-    }
-
-    @include mq(m900) {
-      padding: 3rem 0;
       font-size: x-large;
     }
 
-    font-size: medium;
     text-align: center;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
     margin: 0;
+    font-size: large;
     font-family: "Red Hat Mono", sans-serif;
   }
 
@@ -46,10 +41,9 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     row-gap: 2.5rem;
     font-family: "Gruppo", sans-serif;
-    align-items: center;
+    justify-items: center;
   }
 
   &QABox {
@@ -71,10 +65,9 @@
       padding: 2.5rem;
     }
 
-    justify-self: center;
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     row-gap: 0.4rem;
     padding: 1rem;
     font-weight: 600;
@@ -88,7 +81,6 @@
     font-size: medium;
     border-bottom: solid 0.1rem #fafafa8f;
     padding-bottom: 0.5rem;
-    text-align: center;
     color: #b6eef8;
   }
 

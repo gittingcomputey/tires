@@ -46,16 +46,18 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.homeTeaserBannerBox}>
+                <div>
+                  <span className={styles.homeTeaserBrands}>
+                    Firestoned Rallies Prellies Fauxlken
+                  </span>
+                </div>
                 <div className={styles.homeTeaserImgBox}>
-                  <div className={styles.homeTeaserImgText}>
-                    Find the <br />
-                    right tires <br />
-                    for you
-                  </div>
-                  <div>
-                    <span className={styles.homeTeaserBrands}>
-                      Firestoned Rallies Prellies Fauxlken
-                    </span>
+                  <div className={styles.homeTeaserTagImgText}>
+                    <aside>
+                      Find the <br />
+                      right tires <br />
+                      for you
+                    </aside>
                   </div>
                   <Image
                     className={styles.homeTeaserImg}
