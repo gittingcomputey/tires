@@ -18,9 +18,10 @@
 
   &VidContainer {
     @include mq(m1200) {
-      height: 90vh;
+      height: 89vh;
     }
 
+    padding: 2rem 0;
     height: 94vh;
     position: relative;
     width: 100%;
@@ -38,41 +39,38 @@
   }
 
   &CouponContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    height: 100%;
+    padding: 2rem;
   }
 
-  &HeadlineBox {
+  &CouponBox {
     @include mq(m750) {
       padding: 6rem 4rem;
     }
 
-    @include mq(m900) {
+    @include mq(m750) {
       padding: 1rem 5rem;
-      opacity: 0.95;
-      width: 55%;
     }
 
-    @include mq(m1600) {
-      padding: 5rem;
-    }
-
+    opacity: 0.95;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     text-align: center;
-    // text-transform: uppercase;
+    text-transform: uppercase;
     background-image: linear-gradient(
       174.2deg,
       rgb(253, 251, 243) 7.1%,
       rgb(251, 251, 251) 67.4%
     );
     color: black;
-    opacity: 0.8;
+    opacity: 0.7;
+    backdrop-filter: blur(8px);
     border-radius: 0.3rem;
   }
 
@@ -100,12 +98,7 @@
     display: flex;
     justify-content: space-around;
     padding: 1rem 0;
-    background-image: linear-gradient(
-      102.4deg,
-      #fafafa 0.5%,
-      #f3ffb0 75.8%,
-      #5148ad 100.3%
-    );
+    background-image: linear-gradient(102.4deg, #ecf6ff, #6abcff7b, #ecf6ff);
   }
 
   &Wheel1 {
@@ -118,5 +111,99 @@
     }
 
     max-width: 100%;
+  }
+
+  &Sec2Cont {
+    background-color: #fcfcfc;
+    width: 100%;
+  }
+
+  &Sec2HeadlineBox {
+    text-align: center;
+    font-family: "Goldman", sans-serif;
+  }
+
+  &Sec2Headline {
+    font-size: xxx-large;
+  }
+
+  &Sec2Subline mark {
+    padding: 0 0.3rem;
+  }
+
+  &Sec2Grid {
+    @include mq(m600) {
+    }
+    @include mq(m750) {
+      grid-template-columns: 20% 1fr 20%;
+      grid-template-areas:
+        ". one ."
+        ". two ."
+        ". three ."
+        ". four .";
+    }
+
+    @include mq(m1200) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "one two"
+        "three four";
+    }
+
+    @media screen and (min-width: 1500px) {
+      grid-template-columns: 2% 1fr 1fr 1fr 1fr 2%;
+      grid-template-areas: ". one two three four .";
+    }
+
+    display: grid;
+    max-width: 100%;
+    gap: 0.5rem;
+    overflow: hidden;
+    grid-template-columns: 2% 1fr 2%;
+    grid-template-areas:
+      ". one ."
+      ". two ."
+      ". three ."
+      ". four .";
+  }
+
+  &Sec2GridEach {
+    @media screen and (min-width: 1200px) {
+      & p {
+        padding: 0 6rem;
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      & p {
+        padding: 0 2rem;
+      }
+    }
+
+    padding: 2rem;
+
+    text-align: center;
+  }
+
+  &Sec2Grid_piece1 {
+    grid-area: one;
+  }
+  &Sec2Grid_piece2 {
+    grid-area: two;
+  }
+  &Sec2Grid_piece3 {
+    grid-area: three;
+  }
+  &Sec2Grid_piece4 {
+    grid-area: four;
+  }
+
+  &Sec2Img {
+    @media screen and (max-width: 380px) {
+      width: 150px;
+      height: 100px;
+    }
+
+    border-radius: 0.4rem;
   }
 }

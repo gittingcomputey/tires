@@ -6,10 +6,6 @@
     color: $primaryBlue;
   }
 
-  &HeroBox {
-    // border: dashed red 1rem;
-  }
-
   &HeadlineContainer {
     @include mq(m600) {
       padding: 2rem 0.6rem 2rem 0.3rem;
@@ -65,6 +61,7 @@
       min-height: 73.8vh;
       grid-template-columns: 1fr 1fr;
       gap: 0 2rem;
+      padding: 1rem 4rem;
     }
 
     @include mq(m1600) {
@@ -402,7 +399,7 @@
 
   &TestimonialsBox {
     @include mq(m600) {
-      padding: 1rem 5rem;
+      padding: 1rem 2rem;
     }
 
     @include mq(m750) {
@@ -415,10 +412,14 @@
   }
 
   &TestimonialsReview {
+    @include mq(m600) {
+      font-size: medium;
+    }
+
     border-radius: 0.7rem;
     padding: 0.8rem 2rem;
     font-family: sans-serif, monospace;
-    font-size: medium;
+    font-size: small;
     font-style: italic;
     color: $black;
     background-color: $white;

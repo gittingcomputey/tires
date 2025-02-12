@@ -9,7 +9,7 @@
     }
 
     @include mq(m1200) {
-      padding: 3rem 0;
+      padding: 5rem 0;
     }
 
     background-image: linear-gradient(
@@ -31,7 +31,7 @@
     padding: 2rem 0;
     margin: 0;
     font-size: large;
-    font-family: "Red Hat Mono", sans-serif;
+    font-family: "Share Tech Mono", serif;
   }
 
   &ContentBox {
@@ -103,7 +103,7 @@
       line-height: 1.8rem;
     }
 
-    line-height: 1.4rem;
+    // line-height: 1.4rem;
     font-size: medium;
   }
 }
