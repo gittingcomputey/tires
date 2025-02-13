@@ -15,6 +15,14 @@ a {
   box-sizing: border-box;
 }
 
+details summary {
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
 /* take a peek at overflow */
 /* 
 

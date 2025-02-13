@@ -20,7 +20,7 @@ const Faq = () => {
               {QA.map((qa, index) => (
                 <details key={index} className={styles.faqQABox}>
                   <summary className={styles.faqQuestionBox}>
-                    <p className={styles.faqQuestion}>{qa.Q}</p>
+                    <h2 className={styles.faqQuestion}>{qa.Q}</h2>
                   </summary>
                   <div className={styles.faqAnswerBox}>
                     <p className={styles.faqAnswer}>{qa.A}</p>

@@ -9,7 +9,7 @@
     }
 
     @include mq(m1200) {
-      padding: 5rem 0;
+      padding: 5rem 0 10rem;
     }
 
     background-image: linear-gradient(
@@ -36,7 +36,7 @@
 
   &ContentBox {
     @include mq(m1200) {
-      row-gap: 2rem;
+      row-gap: 4.5rem;
     }
 
     display: grid;
@@ -61,8 +61,7 @@
     }
 
     @include mq(m1200) {
-      max-width: 55%;
-      padding: 2.5rem;
+      max-width: 63%;
     }
 
     display: grid;
@@ -94,6 +93,8 @@
       font-size: xx-large;
     }
 
+    max-height: 4rem;
+    color: #fafafa;
     font-size: large;
   }
 
@@ -103,7 +104,11 @@
       line-height: 1.8rem;
     }
 
-    // line-height: 1.4rem;
+    transition: all 3s ease;
     font-size: medium;
+  }
+
+  &Color {
+    color: red;
   }
 }
