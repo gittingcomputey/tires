@@ -28,7 +28,7 @@ const Specials = () => {
             <aside className={styles.specialsCouponContainer}>
               <div className={styles.specialsCouponBox}>
                 <h1 className={styles.specialsHeadline}>
-                  TireShop <br />
+                  Tire Shop <br />
                   coupon <br />
                   4321
                 </h1>
