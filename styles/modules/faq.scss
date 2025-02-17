@@ -2,14 +2,16 @@
   &Container {
     @include mq(m600) {
       background-image: linear-gradient(
-        109.6deg,
-        rgba(254, 253, 205, 1) 11.2%,
-        rgb(122, 204, 234) 91.1%
+        140.6deg,
+        rgb(3, 109, 148) 11.2%,
+        rgb(3, 109, 148) 41%,
+        rgba(254, 253, 205, 1) 71.1%
       );
     }
 
     @include mq(m1200) {
-      padding: 5rem 0 10rem;
+      padding: 5rem;
+      grid-template-columns: 30% 1fr;
     }
 
     background-image: linear-gradient(
@@ -18,13 +20,21 @@
       rgb(122, 204, 234) 31.1%,
       rgba(254, 253, 205, 1) 91.2%
     );
+
+    overflow: hidden;
     padding: 0 1rem 1rem;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   &Headline {
     @include mq(m600) {
       font-size: x-large;
+    }
+
+    @include mq(m1200) {
+      font-size: xx-large;
     }
 
     text-align: center;
@@ -66,14 +76,16 @@
 
     display: grid;
     width: 100%;
+    max-height: 100%;
     grid-template-columns: 1fr;
     row-gap: 0.4rem;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
     font-weight: 600;
     background-color: $shadow--light;
     color: white;
     border-radius: 0.3rem;
     filter: opacity(0.9);
+    text-align: center;
   }
 
   &QuestionBox {
@@ -104,11 +116,55 @@
       line-height: 1.8rem;
     }
 
+    line-height: 1.2rem;
     transition: all 3s ease;
     font-size: medium;
   }
 
-  &Color {
-    color: red;
+  &TagBox {
+    @include mq(m1200) {
+      display: block;
+    }
+
+    display: none;
+
+    font-family: "Bebas Neue", sans-serif;
+    color: #fafafa;
+    padding-top: 2rem;
+    background-color: transparent;
+  }
+
+  &TagHeader {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  &TagText {
+    font-size: 1.5rem;
+  }
+
+  &TagPicDiv {
+    background-image: url("../../public/TirePicByYvetteS.jpg");
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    width: 95%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &TagPicInner {
+    width: 100%;
+    min-height: 100%;
+    background-color: #fafafa3a;
+    padding: 0.7rem;
+  }
+
+  &TagFillDiv {
+    background-image: url("../../public/tire-svg-1.png");
+    min-width: 100%;
+    min-height: 100%;
+    background-size: contain;
+    filter: invert(60%) opacity(0.4);
   }
 }

@@ -21,21 +21,13 @@ const Navbar = (props) => {
             </Link>
           )}
 
-          {router.pathname === "/specials" ? (
-            ""
-          ) : (
-            <Link className={styles.naviEach} href={"/specials"}>
-              Specials
-            </Link>
-          )}
+          <Link className={styles.naviEach} href={"/specials"}>
+            Specials
+          </Link>
 
-          {router.pathname === "/faq" ? (
-            ""
-          ) : (
-            <Link className={styles.naviEach} href={"/faq"}>
-              FAQ
-            </Link>
-          )}
+          <Link className={styles.naviEach} href={"/faq"}>
+            FAQ
+          </Link>
         </nav>
       </div>
     </>

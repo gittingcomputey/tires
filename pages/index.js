@@ -48,7 +48,7 @@ export default function Home() {
               <div className={styles.homeTeaserBannerBox}>
                 <div>
                   <span className={styles.homeTeaserBrands}>
-                    Firestoned Rallies Prellies Fauxlken
+                    Firestones Rallies Prellies Fauxlken
                   </span>
                 </div>
                 <div className={styles.homeTeaserImgBox}>
@@ -90,7 +90,7 @@ export default function Home() {
 
           {/* services section */}
           <section id="services" className={styles.homeServicesSection}>
-            <div className={styles.homeServicesCont}>
+            <article className={styles.homeServicesCont}>
               <div className={styles.homeServicesMid}>
                 <div className={styles.homeServicesHeadlineBox}>
                   <h2 className={styles.homeServicesHeadline1}>Services</h2>
@@ -122,10 +122,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
 
-            {/* testimonials section */}
-            <section className={styles.homeTestimonialsCont}>
+            {/* testimonials */}
+            <article className={styles.homeTestimonialsCont}>
               <div className={styles.homeTestimonialsBox}>
                 <div className={styles.homeTestimonialsHeadlineBox}>
                   <h2 className={styles.homeTestimonialsHeadline}>
@@ -140,18 +140,17 @@ export default function Home() {
                   </p>
                   <p className={styles.homeTestimonialsReview}>
                     By chance on the corner of Miscellaneous and Avenue I made a
-                    u turn and I found an awesome place. -CDA
+                    u turn and I found an awesome place. -CL
                   </p>
                   <p className={styles.homeTestimonialsReview}>
-                    Jane Do and the rest of the team never lag to help a girl
-                    out in need when she pops a tire or has another nail in the
-                    benz. -CU
+                    Been coming to Tire Shop for years. I often find used tires
+                    that have little wear and the price is always right. -ALF
                   </p>
                   <p className={styles.homeTestimonialsReview}>
-                    Really friendly and super helpful! -ARG
+                    Really friendly and super helpful. Good Deals. -ARG
                   </p>
                 </div>
-                <div className={styles.homeTestimonialsEsp}>
+                <aside className={styles.homeTestimonialsEsp}>
                   <div className={styles.homeTestimonialsEspBox}>
                     <h3 lang="es" className={styles.homeTestimonialsEspText}>
                       <span className={styles.homeTestimonialsEspTextCaps}>
@@ -161,9 +160,28 @@ export default function Home() {
                       Ubicados en Hollywood.
                     </h3>
                   </div>
-                </div>
+                </aside>
               </div>
-            </section>
+            </article>
+          </section>
+          <section className={styles.homeTagCont}>
+            <div className={styles.homeTagBox}>
+              <div className={styles.homeTagTitleDiv}>
+                <h3 className={styles.homeTagTitle}>From road to adventure</h3>
+              </div>
+              <div className={styles.homeTagSecDiv}>
+                <p className={styles.homeTagSec1Text}>
+                  The new <br></br> Q42 Tropheus RS
+                </p>
+              </div>
+              <div className={styles.homeTagSecDiv}>
+                <p className={styles.homeTagSec2Text}>
+                  Try Q42 Tropheus RS, made for the longevity. Extreme control
+                  and performance in every situation.
+                </p>
+                <small>Your official California Dealer</small>
+              </div>
+            </div>
           </section>
         </main>
       </Layout>

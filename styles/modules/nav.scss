@@ -4,8 +4,12 @@
       min-height: 6vh;
     }
 
-    background-color: #fafafa;
+    background-color: #e5d5d5;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 0.1rem $shadow;
   }
 
   &Container {
@@ -14,24 +18,18 @@
     }
 
     padding: 0.5rem 0rem;
-    background-color: #fafafa;
+    background-color: #fafafac0;
     display: flex;
     justify-content: center;
-    border-bottom: solid black 0.02rem;
   }
 
   &Each {
-    @include mq(m750) {
-      &:hover {
-        scale: 1.05;
-      }
-    }
-
     font-family: "Goldman", sans-serif;
     padding: 0 0.5rem;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: medium;
+    transition: scale 200ms ease-in-out;
 
     &:active {
       color: blue;

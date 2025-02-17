@@ -19,7 +19,7 @@
 
   &HeadlineBox {
     margin: 1rem 0;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 1rem;
     box-shadow: 0.5rem 0.5rem 0.09rem $shadow;
     text-align: center;
     background-color: $primaryYellow;
@@ -85,36 +85,34 @@
       font-size: large;
     }
 
-    @include mq(mland) {
-      min-height: none;
-    }
     @include mq(m600) {
       font-size: xx-large;
     }
 
     @include mq(m1200) {
-      min-height: 0;
+      min-height: 20vh;
       border-radius: 0.7rem;
       line-height: 2.5rem;
-      background-color: $shadow--bitless;
-      color: white;
+      background-color: $deepBlue;
       transition: 0.4s ease-in-out;
-      padding: 0 7rem;
+      padding: 0 4rem;
       font-size: x-large;
+      line-height: 2rem;
     }
 
     @include mq(m1600) {
       font-size: xx-large;
     }
 
+    line-height: 2.4rem;
+    min-height: 90vh;
     background-color: #fafafacb;
     color: black;
     font-size: x-large;
     text-align: center;
     font-family: "Gruppo", sans-serif;
     font-weight: 600;
-    padding: 1rem 2.3rem 4rem;
-    line-height: 2rem;
+    padding: 1rem 3rem 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,9 +237,9 @@
   &AddyButton {
     font-family: serif;
     cursor: pointer;
-    background-color: rgba(35, 35, 218, 0.732);
+    background-color: $deepBlue;
     padding: 0.5rem 1rem;
-    color: #fafafa;
+    color: $shadow;
     font-weight: 600;
     border: none;
     border-radius: 0.15rem;
@@ -264,21 +262,21 @@
     }
 
     @include mq(m1200) {
-      padding: 6rem 0;
+      padding: 4rem 0;
       column-gap: 3rem;
       row-gap: 0;
       justify-content: space-around;
-      grid-template-columns: 3% 1fr 1fr 3%;
+      grid-template-columns: 2% 1fr 1fr 2%;
       grid-template-areas:
         ". services test ."
         ". services test .";
     }
 
     @include mq(m1600) {
-      padding: 6rem 0;
+      padding: 4rem 0;
       column-gap: 6rem;
       justify-content: space-around;
-      grid-template-columns: 6% 1fr 1fr 6%;
+      grid-template-columns: 2% 1fr 1fr 2%;
       grid-template-areas:
         ". services test ."
         ". services test .";
@@ -286,9 +284,10 @@
 
     border-top: solid $white 0.7rem;
     background-image: linear-gradient(
-        rgb(154, 187, 237) 0%,
+        rgb(51, 118, 220) 0%,
+        rgba(62, 121, 209, 0.719) 25%,
         rgba(134, 183, 231, 0.75),
-        rgba(179, 207, 235, 0.97) 50%,
+        rgba(179, 207, 235, 0.97) 70%,
         transparent
       ),
       url("../../public/tireTrack.png");
@@ -311,10 +310,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.9;
     padding: 1rem;
     text-align: center;
-    background-color: red;
   }
 
   &ServicesMid {
@@ -416,7 +413,7 @@
 
     border-radius: 0.7rem;
     padding: 0.8rem 2rem;
-    font-family: sans-serif, monospace;
+    font-family: "Goldman", sans-serif, monospace;
     font-size: small;
     font-style: italic;
     color: $black;
@@ -459,5 +456,64 @@
 
   &TestimonialsEspTextCaps {
     text-transform: uppercase;
+  }
+
+  // tag  ------------------------------------------
+  &TagCont {
+    @include mq(m1200) {
+      background-image: url("../../public/carTire-artur-aldyrkhanov_2500.jpg");
+    }
+
+    background-image: image-set(
+      url("../../public/carTire-artur-aldyrkhanov_700.jpg") 1x,
+      url("../../public/carTire-artur-aldyrkhanov_1000.jpg") 2x
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &TagBox {
+    @include mq(m750) {
+      padding-left: 4rem;
+    }
+
+    font-family: "Share Tech Mono", serif;
+    font-weight: 600;
+    opacity: 1;
+    min-height: 90vh;
+    background-color: #fafafa43;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    justify-content: center;
+    color: #fafafa;
+  }
+
+  &TagTitle {
+    @include mq(m1200) {
+      font-size: 3.5rem;
+    }
+
+    font-size: 3rem;
+    filter: brightness(115%);
+  }
+
+  &TagSec1Text {
+    @include mq(m1200) {
+      font-size: 2.5rem;
+    }
+
+    font-size: 2rem;
+    filter: brightness(115%);
+  }
+
+  &TagSec2Text {
+    @include mq(m1200) {
+      font-size: 1.5rem;
+    }
+
+    font-size: 1.2rem;
+    filter: brightness(115%);
   }
 }

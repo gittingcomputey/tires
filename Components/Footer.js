@@ -17,10 +17,9 @@ const Footer = () => {
               123 Miscellaneous St <br></br>
               Hollywood, CA 90028 <br></br>
               <span className={styles.footerInfoTel}>
-                <Link href="tel:2484345508">Tel:800-123-1212</Link>
+                <Link href="tel:2484345508">Tel: 800-123-1212</Link>
               </span>
             </p>
-
             <p className={styles.footerHours}>
               Mon-Sat: 11am - 6pm <br />
               Sunday: 11am - 5pm
