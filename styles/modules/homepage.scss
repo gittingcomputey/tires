@@ -61,7 +61,7 @@
       min-height: 73.8vh;
       grid-template-columns: 1fr 1fr;
       gap: 0 2rem;
-      padding: 1rem 4rem;
+      padding: 1rem 4rem 1rem 8rem;
     }
 
     @include mq(m1600) {
@@ -90,7 +90,7 @@
     }
 
     @include mq(m1200) {
-      min-height: 20vh;
+      min-height: 50vh;
       border-radius: 0.7rem;
       line-height: 2.5rem;
       background-color: $deepBlue;
