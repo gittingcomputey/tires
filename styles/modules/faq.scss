@@ -10,7 +10,6 @@
     }
 
     @include mq(m1200) {
-      padding: 5rem;
       grid-template-columns: 30% 1fr;
     }
 
@@ -46,7 +45,7 @@
 
   &ContentBox {
     @include mq(m1200) {
-      row-gap: 4.5rem;
+      row-gap: 3rem;
     }
 
     display: grid;
@@ -79,7 +78,7 @@
     max-height: 100%;
     grid-template-columns: 1fr;
     row-gap: 0.4rem;
-    padding: 1rem 1rem 2rem;
+    padding: 1rem;
     font-weight: 600;
     background-color: $shadow--light;
     color: white;
@@ -130,12 +129,12 @@
 
     font-family: "Bebas Neue", sans-serif;
     color: #fafafa;
-    padding-top: 2rem;
+    padding-left: 2rem;
     background-color: transparent;
   }
 
   &TagHeader {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 2rem;
   }
 

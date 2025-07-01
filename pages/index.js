@@ -54,16 +54,15 @@ export default function Home() {
                 <div className={styles.homeTeaserImgBox}>
                   <div className={styles.homeTeaserTagImgText}>
                     <aside>
-                      Find the <br />
-                      right tires <br />
-                      for you
+                      Great prices <br />
+                      Quality tires
                     </aside>
                   </div>
                   <Image
                     className={styles.homeTeaserImg}
                     src="/TirePicByYvetteS.jpg"
-                    width="600"
-                    height="300"
+                    width="550"
+                    height="250"
                     alt="Closeup of new tire top part of new tire. You can see the threads are unworn and have deep grooves."
                   />
                 </div>
@@ -71,18 +70,22 @@ export default function Home() {
                   <p className={styles.homeTeaserData}>
                     123 Miscellaneous St <br></br> Hollywood, CA 90028
                   </p>
+                  <button className={styles.homeAddyButton}>
+                    <Link
+                      target={"_blank"}
+                      href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
+                    >
+                      Map
+                    </Link>
+                  </button>
+                </div>
+                <div>
                   <p className={styles.homeTeaserData}>
                     <span>
                       <GiPhone className={styles.homeTeaserPhoneIcon} />
                     </span>
                     <Link href="tel:8001231212">800-123-1212</Link>
                   </p>
-                  <Link
-                    target={"_blank"}
-                    href="https://www.google.com/maps/place/15412+Nordhoff+St,+North+Hills,+CA+91343/@34.2352896,-118.4706217,17z/data=!3m1!4b1!4m6!3m5!1s0x80c290be0d480985:0x7d85e53fd54563d4!8m2!3d34.2352852!4d-118.468433!16s%2Fg%2F11csd3hbxs"
-                  >
-                    <button className={styles.homeAddyButton}>OPEN MAP</button>
-                  </Link>
                 </div>
               </div>
             </section>

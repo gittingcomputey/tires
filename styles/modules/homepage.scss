@@ -8,7 +8,7 @@
 
   &HeadlineContainer {
     @include mq(m600) {
-      padding: 2rem 0.6rem 2rem 0.3rem;
+      padding: 1rem 0.6rem 1rem 0.3rem;
     }
 
     margin: 0;
@@ -18,8 +18,7 @@
   }
 
   &HeadlineBox {
-    margin: 1rem 0;
-    padding: 0.2rem 1rem;
+    padding: 0 1rem;
     box-shadow: 0.5rem 0.5rem 0.09rem $shadow;
     text-align: center;
     background-color: $primaryYellow;
@@ -31,16 +30,16 @@
 
   &Word {
     @include mq(m600) {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
-    @include mq(m1200) {
-      font-size: 2.8rem;
-    }
+    // @include mq(m1200) {
+    //   font-size: 2.8rem;
+    // }
 
-    @include mq(m1600) {
-      font-size: 3rem;
-    }
+    // @include mq(m1600) {
+    //   font-size: 3rem;
+    // }
 
     font-family: "Stalinist One", sans-serif;
     font-size: 2rem;
@@ -96,7 +95,7 @@
       background-color: $deepBlue;
       transition: 0.4s ease-in-out;
       padding: 0 4rem;
-      font-size: x-large;
+      font-size: large;
       line-height: 2rem;
     }
 
@@ -140,7 +139,6 @@
 
   &TeaserAddyBox {
     padding: 0;
-    margin-top: 0.5rem;
   }
 
   &TeaserData {
@@ -193,19 +191,18 @@
 
     @include mq(m1600) {
       width: 450px;
-      height: 300px;
+      height: 250px;
     }
 
     grid-column: 1;
     grid-row: 1;
-    width: 300px;
-    height: 200px;
+
     border-radius: 0.3rem;
   }
 
   &TeaserTagImgText {
     @include mq(m600) {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     grid-column: 1;
@@ -215,17 +212,11 @@
     align-self: center;
     color: $shadow--bitless;
     font-family: "Faster One", serif;
-    background-image: linear-gradient(
-      to bottom right,
-      #dff4d4 15%,
-      #d9ebf2 50%,
-      #d9ebf28d 75%,
-      transparent 85%
-    );
+
     font-size: x-large;
     padding: 1.4rem;
     color: $primaryYellow;
-    text-shadow: 0 0 0.2rem black;
+    text-shadow: 0 0 0.2rem rgba(19, 73, 6, 0.648);
     background-clip: text;
   }
 
@@ -238,45 +229,50 @@
     font-family: serif;
     cursor: pointer;
     background-color: $deepBlue;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
     color: $shadow;
     font-weight: 600;
-    border: none;
+    border: solid #fafafa98 0.02rem;
     border-radius: 0.15rem;
 
     &:hover {
-      background-color: rgba(35, 35, 218, 0.4);
+      background-color: rgba(28, 87, 17, 0.828);
+      color: white;
     }
+  }
+
+  &AddyButton::after {
+    content: " ->";
   }
 
   &ServicesSection {
     @include mq(m750) {
-      padding: 6rem 0;
-      column-gap: 3rem;
-      row-gap: 4rem;
-      justify-content: space-around;
-      grid-template-columns: 3% 1fr 1fr 3%;
+      // padding: 6rem 0;
+      // column-gap: 3rem;
+      // row-gap: 4rem;
+      // justify-content: space-around;
+      // grid-template-columns: 3% 1fr 1fr 3%;
       grid-template-areas:
         ". services services ."
         ". test test .";
     }
 
     @include mq(m1200) {
-      padding: 4rem 0;
-      column-gap: 3rem;
-      row-gap: 0;
-      justify-content: space-around;
-      grid-template-columns: 2% 1fr 1fr 2%;
+      // padding: 4rem 0;
+      // column-gap: 3rem;
+      // row-gap: 0;
+      // justify-content: space-around;
+      // grid-template-columns: 2% 1fr 1fr 2%;
       grid-template-areas:
         ". services test ."
         ". services test .";
     }
 
     @include mq(m1600) {
-      padding: 4rem 0;
-      column-gap: 6rem;
-      justify-content: space-around;
-      grid-template-columns: 2% 1fr 1fr 2%;
+      // padding: 2rem 0;
+      // column-gap: 6rem;
+      // justify-content: space-around;
+      // grid-template-columns: 2% 1fr 1fr 2%;
       grid-template-areas:
         ". services test ."
         ". services test .";
@@ -297,8 +293,8 @@
     display: grid;
     grid-template-columns: 2% 1fr 1fr 2%;
     justify-content: space-evenly;
-    padding: 2rem 0 6rem;
-    row-gap: 2rem;
+    padding: 2rem 0;
+    gap: 2rem;
     grid-template-areas:
       ". services services ."
       ". test test .";
@@ -337,8 +333,8 @@
     font-family: "VT323", monospace;
     margin: 0;
     color: rgba(83, 138, 214, 1);
-    font-size: x-large;
-
+    font-size: large;
+    text-transform: uppercase;
     text-shadow: 0.1rem 0.1rem 0 $primaryYellow;
     background-color: #fafafadf;
     text-align: center;
@@ -368,14 +364,14 @@
     letter-spacing: 0.3rem;
     font-size: small;
     font-family: "Stalinist One", sans-serif;
-    text-transform: uppercase;
+
     padding: 0.5rem;
     text-align: center;
   }
 
   &ServicesIcon {
     @include mq(m1200) {
-      font-size: xxx-large;
+      font-size: xx-large;
     }
 
     text-align: center;
@@ -394,11 +390,7 @@
 
   &TestimonialsBox {
     @include mq(m600) {
-      padding: 1rem 2rem;
-    }
-
-    @include mq(m750) {
-      padding: 2rem;
+      padding: 1rem;
     }
 
     padding: 1rem;
@@ -440,22 +432,8 @@
   }
 
   &TestimonialsEsp {
-    @include mq(m900) {
-      font-size: small;
-    }
-
-    @include mq(m1200) {
-      font-size: medium;
-      padding: 2rem 1rem 1.5rem;
-    }
-
     font-size: small;
     text-align: center;
-    padding: 2rem 3rem;
-  }
-
-  &TestimonialsEspTextCaps {
-    text-transform: uppercase;
   }
 
   // tag  ------------------------------------------

@@ -18,11 +18,11 @@
 
   &VidContainer {
     @include mq(m1200) {
-      height: 89vh;
+      min-height: 89vh;
     }
 
     padding: 2rem 0;
-    height: 94vh;
+    min-height: 94vh;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -39,27 +39,15 @@
   }
 
   &CouponContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 2rem;
+    align-items: center;
   }
 
   &CouponBox {
-    @include mq(m750) {
-      padding: 6rem 4rem;
-    }
-
-    @include mq(m750) {
-      padding: 1rem 5rem;
-    }
-
     opacity: 0.95;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 1rem;
     text-align: center;
     text-transform: uppercase;
